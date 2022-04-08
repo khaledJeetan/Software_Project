@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="afterLogin" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projects.software.restaurantns.ProfileController">
+   <children>
+      <Label layoutX="167.0" layoutY="170.0" prefHeight="60.0" prefWidth="267.0" text="After Login Page">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Label>
+      <Label layoutX="235.0" layoutY="38.0" prefHeight="40.0" prefWidth="131.0" text="Welcome">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <Label fx:id="name" layoutX="170.0" layoutY="79.0" prefHeight="40.0" prefWidth="248.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="pass" layoutX="170.0" layoutY="118.0" prefHeight="40.0" prefWidth="248.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="65.0" layoutY="83.0" prefHeight="32.0" prefWidth="105.0" text="Your Name is:" />
+      <Label layoutX="65.0" layoutY="122.0" prefHeight="32.0" prefWidth="105.0" text="your Password is:" />
+   </children>
+</AnchorPane>
