@@ -8,59 +8,65 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="login" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #171717;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projects.software.restaurantns.LoginController">
+<BorderPane fx:id="login" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #171717;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projects.software.restaurantns.LoginController">
    <left>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #566374;" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fitHeight="382.0" fitWidth="291.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="200.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../images/Logo.png" />
+                  <Image url="@../../../images/happy-birthday-icegif-9.gif" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="212.0" fitWidth="251.0" layoutX="7.0" layoutY="188.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/WhatsApp%20Image%202022-04-11%20at%2011.19.48%20AM.png" />
                </image>
             </ImageView>
          </children>
       </AnchorPane>
    </left>
    <right>
-      <AnchorPane prefHeight="400.0" prefWidth="409.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="400.0" prefWidth="409.0" style="-fx-background-color: #505050;" BorderPane.alignment="CENTER">
          <children>
             <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fitHeight="56.0" fitWidth="58.0" layoutX="126.0" layoutY="65.0">
+            <ImageView fitHeight="77.0" fitWidth="102.0" layoutX="104.0" layoutY="63.0">
                <image>
-                  <Image url="@../../../images/lock.png" />
+                  <Image url="@../../../images/11f310_d278f013de8b4f52ad96a78d78e20375_mv2.gif" />
                </image>
             </ImageView>
-            <Label layoutX="23.0" layoutY="190.0" prefHeight="37.0" prefWidth="103.0" text="Username" textFill="#ffc900">
+            <Label layoutX="23.0" layoutY="190.0" prefHeight="37.0" prefWidth="103.0" text="Username" textFill="#fbfffe">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
             </Label>
-            <Label layoutX="23.0" layoutY="237.0" prefHeight="37.0" prefWidth="103.0" text="Password" textFill="#ffc900">
+            <Label layoutX="23.0" layoutY="237.0" prefHeight="37.0" prefWidth="103.0" text="Password" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
             </Label>
             <TextField fx:id="username" layoutX="130.0" layoutY="196.0" promptText="Username" />
             <PasswordField fx:id="password" layoutX="130.0" layoutY="243.0" promptText="Password" />
-            <Button layoutX="114.0" layoutY="317.0" mnemonicParsing="false" onAction="#signIn" prefHeight="36.0" prefWidth="82.0" style="-fx-background-color: #ffc900;" text="Sign in" textFill="#650030">
+            <Button layoutX="114.0" layoutY="317.0" mnemonicParsing="false" onAction="#signIn" prefHeight="36.0" prefWidth="82.0" style="-fx-background-color: #505050;" text="Sign in" textFill="WHITE">
                <font>
                   <Font name="System Bold Italic" size="15.0" />
                </font></Button>
-            <Label alignment="CENTER" layoutX="86.0" layoutY="133.0" prefHeight="17.0" prefWidth="139.0" style="-fx-background-radius: 100px; -fx-background-color: #ffc900;" text="Login" textAlignment="CENTER" textFill="#650030f7">
-               <font>
-                  <Font name="System Bold Italic" size="24.0" />
-               </font>
-            </Label>
             <Label fx:id="msg" layoutX="29.0" layoutY="280.0" prefHeight="27.0" prefWidth="270.0" textFill="RED">
                <font>
                   <Font size="15.0" />
                </font>
             </Label>
+            <Button layoutX="115.0" layoutY="353.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="80.0" style="-fx-background-color: #505050;" text="sing up" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Button>
+            <Label layoutX="127.0" layoutY="130.0" prefHeight="34.0" prefWidth="114.0" text="Login" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="27.0" />
+               </font>
+            </Label>
          </children></AnchorPane>
    </right>
-   <center>
-      <Line endX="96.05030822753906" endY="-86.80722045898438" startX="93.92892456054688" startY="-410.1001281738281" stroke="#ffb200" BorderPane.alignment="CENTER" />
-   </center>
 </BorderPane>
