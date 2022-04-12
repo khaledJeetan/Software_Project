@@ -14,7 +14,7 @@
    <left>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #566374;" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fitHeight="200.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="188.0" fitWidth="252.0" layoutX="-2.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../images/happy-birthday-icegif-9.gif" />
                </image>
