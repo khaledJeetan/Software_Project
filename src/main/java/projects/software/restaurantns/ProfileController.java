@@ -19,7 +19,8 @@ public class ProfileController {
     }
 
     public void loadData(){
-        name.setText(UserHolder.getInstance().getUser().getName());
+        name.setText(UserHolder.getInstance().getUser().getName() + " created At: "
+                +UserHolder.getInstance().getUser().getCreation_date() );
         pass.setText(UserHolder.getInstance().getUser().getPassword());
     }
 

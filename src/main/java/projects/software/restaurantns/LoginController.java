@@ -10,6 +10,7 @@ import java.sql.*;
 public class LoginController {
 
     private final ReviewSystem main = new ReviewSystem();
+    private  User user;
 
     @FXML
     private TextField username;
@@ -18,7 +19,6 @@ public class LoginController {
 
     @FXML
     private Label msg;
-
 
     @FXML
     public void signIn() {
@@ -31,7 +31,6 @@ public class LoginController {
     }
 
     private void setUser() {
-        User user = new User(username.getText(),password.getText());
         UserHolder.getInstance().setUser(user);
     }
 
@@ -53,13 +52,14 @@ public class LoginController {
         try {
             Connection con = main.getConnection();
             Statement stmt = con.createStatement();
-            String sql = "select username, password from user_tb";
+            String sql = "select * from user_tb";
             ResultSet resultSet = stmt.executeQuery(sql);
 
             while (resultSet.next()) {
                 String user = resultSet.getString("username");
                 String pass = resultSet.getString("password");
                 if (username.getText().matches(user) && password.getText().matches(pass)) {
+                    this.user = DbWraper.wrapUser(resultSet);
                     return true;
                 }
             }
