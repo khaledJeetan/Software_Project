@@ -9,6 +9,8 @@ module projects.softwareengineering.restaurantms {
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
+    requires com.oracle.database.jdbc;
+    requires java.sql;
 
     opens projects.software.restaurantns to javafx.fxml;
     exports projects.software.restaurantns;
