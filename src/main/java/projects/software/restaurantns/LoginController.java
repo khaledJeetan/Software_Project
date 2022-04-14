@@ -27,8 +27,24 @@ public class LoginController {
             return;
         }
         setUser();
-        main.changeScene("afterLogin.fxml");
+        main.changeScene("options.fxml");
     }
+
+
+
+    @FXML
+    public void su() {
+
+        main.changeScene("signup.fxml");
+    }
+
+    public void xx() {
+
+        main.changeScene("options.fxml");
+    }
+
+
+
 
     private void setUser() {
         UserHolder.getInstance().setUser(user);

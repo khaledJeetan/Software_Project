@@ -57,7 +57,7 @@
                   <Font size="15.0" />
                </font>
             </Label>
-            <Button layoutX="115.0" layoutY="353.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="80.0" style="-fx-background-color: #505050;" text="sing up" textAlignment="CENTER" textFill="WHITE">
+            <Button layoutX="115.0" layoutY="353.0" mnemonicParsing="false" onAction="#su" prefHeight="34.0" prefWidth="80.0" style="-fx-background-color: #505050;" text="sing up" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="System Bold Italic" size="14.0" />
                </font>
@@ -67,7 +67,7 @@
                   <Font name="System Bold Italic" size="27.0" />
                </font>
             </Label>
-            <Button layoutX="288.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: #505050;" text="x" textFill="WHITE">
+            <Button layoutX="288.0" layoutY="14.0" mnemonicParsing="false" onAction="#xx" style="-fx-background-color: #505050;" text="x" textFill="WHITE">
                <font>
                   <Font size="21.0" />
                </font>
