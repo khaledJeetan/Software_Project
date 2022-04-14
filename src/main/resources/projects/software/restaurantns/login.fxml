@@ -16,12 +16,12 @@
          <children>
             <ImageView fitHeight="188.0" fitWidth="252.0" layoutX="-2.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../images/happy-birthday-icegif-9.gif" />
+                  <Image url="@../../../images/e.gif" />
                </image>
             </ImageView>
             <ImageView fitHeight="212.0" fitWidth="251.0" layoutX="7.0" layoutY="188.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../images/WhatsApp%20Image%202022-04-11%20at%2011.19.48%20AM.png" />
+                  <Image url="@../../../images/a.png" />
                </image>
             </ImageView>
          </children>
@@ -33,7 +33,7 @@
             <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
             <ImageView fitHeight="77.0" fitWidth="102.0" layoutX="104.0" layoutY="63.0">
                <image>
-                  <Image url="@../../../images/11f310_d278f013de8b4f52ad96a78d78e20375_mv2.gif" />
+                  <Image url="@../../../images/d.gif" />
                </image>
             </ImageView>
             <Label layoutX="23.0" layoutY="190.0" prefHeight="37.0" prefWidth="103.0" text="Username" textFill="#fbfffe">
@@ -67,6 +67,11 @@
                   <Font name="System Bold Italic" size="27.0" />
                </font>
             </Label>
+            <Button layoutX="288.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: #505050;" text="x" textFill="WHITE">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Button>
          </children></AnchorPane>
    </right>
 </BorderPane>
