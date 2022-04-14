@@ -21,7 +21,7 @@
             </ImageView>
             <ImageView fitHeight="212.0" fitWidth="251.0" layoutX="7.0" layoutY="188.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../images/WhatsApp%20Image%202022-04-11%20at%2011.19.48%20AM.png" />
+                  <Image url="@../../../images/a.png" />
                </image>
             </ImageView>
          </children>
