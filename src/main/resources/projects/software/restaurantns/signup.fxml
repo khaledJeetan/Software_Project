@@ -9,7 +9,6 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
-
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #1C89E0;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projects.software.restaurantns.LoginController">
@@ -42,9 +41,9 @@
             <PasswordField layoutX="247.0" layoutY="236.0" prefHeight="33.0" prefWidth="306.0" style="-fx-background-color: #ADD8E6; -fx-background-insets: 1; -fx-background-radius: 20;" />
          </children>
       </Pane>
-      <ImageView fitHeight="134.0" fitWidth="200.0" layoutX="22.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="134.0" fitWidth="200.0" layoutX="23.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@/D:/Documents/NetBeansProjects/Software_Project/src/main/resources/images/sign-up.gif" />
+            <Image url="@../../../images/sign-up.gif" />
          </image>
       </ImageView>
    </children>
