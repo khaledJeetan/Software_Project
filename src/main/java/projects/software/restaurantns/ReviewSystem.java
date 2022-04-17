@@ -35,22 +35,22 @@ public class ReviewSystem extends Application {
 
             Parent root = FXMLLoader.load(getClass().getResource(fxml));
             this.stage.getScene().setRoot(root);
+            this.stage.sizeToScene();
         }
         catch (Exception e){
             e.printStackTrace();
         }
 
     }
-    public Connection getConnection() {
+    public Connection getConnection() throws SQLException {
+        con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "c##software", "123456");
+        if(con != null){
+            System.out.println("connected successfully!");
+        }
         return con;
     }
 
     public static void main(String[] args) throws SQLException {
-        con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "c##software", "123456");
-
-        if(con != null){
-            System.out.println("connected successfully!");
-        }
         launch();
         con.close();
     }

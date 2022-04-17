@@ -8,7 +8,8 @@ create table USER_TB
     CREATION_DATE    TIMESTAMP(6) default current_date not null,
     LAST_ACCESS_DATE TIMESTAMP(6),
     UPDATED_AT       TIMESTAMP(6),
-    ENABLED          CHAR         default 1            not null
+    ENABLED          CHAR         default 1            not null,
+    PHOTO            BLOB
 )
 /
 

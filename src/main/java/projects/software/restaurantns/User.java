@@ -1,5 +1,9 @@
 package projects.software.restaurantns;
 
+import javafx.scene.image.Image;
+
+import java.io.InputStream;
+import java.sql.Blob;
 import java.sql.Timestamp;
 
 public class User {
@@ -11,6 +15,7 @@ public class User {
     private Timestamp updated_at;
     private Timestamp last_access_date;
     private boolean enabled;
+    private Image photo;
 
     public User(String name, String password){
         this.name =  name;
@@ -71,6 +76,17 @@ public class User {
 
     public void setEnabled(boolean enabled) {
         this.enabled = enabled;
+    }
+
+    public Image getPhoto() {
+        return photo;
+    }
+
+    public void setPhoto( InputStream photo) {
+        if(photo != null) {
+            Image img = new Image(photo);
+            this.photo = img;
+        }
     }
 
     @Override

@@ -27,18 +27,25 @@ public class LoginController {
             return;
         }
         setUser();
-        main.changeScene("options.fxml");
+
+        if(user.isAdmin()){
+            main.changeScene("admin.fxml");
+        }
+        else{
+            main.changeScene("user.fxml");
+        }
+
     }
 
 
 
     @FXML
-    public void su() {
+    public void signUp() {
 
         main.changeScene("signup.fxml");
     }
 
-    public void xx() {
+    public void close() {
 
         main.changeScene("options.fxml");
     }
@@ -76,9 +83,13 @@ public class LoginController {
                 String pass = resultSet.getString("password");
                 if (username.getText().matches(user) && password.getText().matches(pass)) {
                     this.user = DbWraper.wrapUser(resultSet);
+                    stmt.close();
+                    con.close();
                     return true;
                 }
             }
+            stmt.close();
+            con.close();
         }catch (Exception e){
             System.out.println("Error with getting and checking Users from DB");
             e.printStackTrace();

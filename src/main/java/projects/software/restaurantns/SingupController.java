@@ -5,21 +5,19 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundFill;
+import javafx.scene.paint.Color;
 
+import java.sql.*;
 import java.time.LocalDate;
-
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.time.LocalDateTime;
 
 
 public class SingupController {
     private  ReviewSystem main = new ReviewSystem();
-    private  User user;
     @FXML
     private TextField username;
-    @FXML
-    private TextField E_mail;
     @FXML
     private TextField newpassword;
     @FXML
@@ -29,51 +27,85 @@ public class SingupController {
 
     @FXML
     public void signup() {
-        if(!validcreateaccount()){
+        if(!validCreateAccount()){
             return;
         }
-        setUser();
+
         main.changeScene("login.fxml");
     }
-    private void setUser() {
-        UserHolder.getInstance().setUser(user);
-    }
-    private boolean validcreateaccount() {
-        if(username.getText().isEmpty() || newpassword.getText().isEmpty()|| confirmpassword.getText().isEmpty()|| E_mail.getText().isEmpty()){
+
+    private boolean validCreateAccount() {
+        if(username.getText().isEmpty() || newpassword.getText().isEmpty()|| confirmpassword.getText().isEmpty()){
             msg.setText("Please Enter Information");
         }
         else if(!((confirmpassword.getText()).equals(newpassword.getText()))){
             msg.setText("the Password is not equal");
         }
 
-        else if(isUser()){
-            msg.setText("Success!");
-            main.changeScene("signup.fxml");
-            return true;
+        else if(!isUser()){
+            if(createUser()) {
+                msg.setText("Account created Successfully");
+                msg.setStyle("-fx-background-color:#d1e6dd");
+                msg.setTextFill(Color.rgb(48, 92, 69));
+                msg.setVisible(true);
+                return true;
+            }
         }
-
+        else {
+            msg.setText(username.getText() + " is Already a User!!");
+        }
+        msg.setVisible(true);
         return false;
     }
 
-
-
     private boolean isUser(){
         try {
-            LocalDate date = LocalDate.now();
-           Connection con = main.getConnection();
+            Connection con = main.getConnection();
             Statement stmt = con.createStatement();
-            String sql = "Insert into USER_TB (USERNAME,PASSWORD) values ('"+username.getText()+"',"+newpassword.getText()+") ";
-            ResultSet resultSet = stmt.executeQuery(sql);
-      //      (USERNAME,PASSWORD,TYPE,CREATION_DATE,LAST_ACCESS_DATE,UPDATED_AT,ENABLED)
+            String sql = "select USERNAME from user_tb where USERNAME = '" +
+                    this.username.getText() + "'";
+
+             ResultSet resultSet = stmt.executeQuery(sql);
+
+             if(resultSet.next()) {
+                 stmt.close();
+                 con.close();
+                    return true;
+                }
+            stmt.close();
+            con.close();
+            } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+        catch (Exception e){
+            System.out.println("Error with getting and checking User from DB");
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    private boolean createUser(){
+        try {
+            Timestamp creationDate = Timestamp.valueOf(LocalDateTime.now());
+
+            Connection con = main.getConnection();
+            String sql = "Insert into USER_TB (USERNAME,PASSWORD,CREATION_DATE) values (?,?,?)";
+            PreparedStatement stmt = con.prepareStatement(sql);
+            stmt.setString(1,username.getText());
+            stmt.setString(2,confirmpassword.getText());
+            stmt.setTimestamp(3,creationDate);
+            stmt.executeUpdate();
+            System.out.println("Query Executed successfully");
+            stmt.close();
+            con.close();
             username.setText("");
-              newpassword.setText("");
-              confirmpassword.setText("");
-              E_mail.setText("");
+            newpassword.setText("");
+            confirmpassword.setText("");
               return true;
 
 
         }catch (Exception e){
-            System.out.println("Error with getting and checking Users from DB");
+            System.out.println("Error with Creating new User.");
             e.printStackTrace();
         }
         return false;
