@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -9,7 +10,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projects.software.restaurantns.Breakfast">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #FFEAAC;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projects.software.restaurantns.Breakfast">
    <children>
       <AnchorPane prefHeight="71.0" prefWidth="602.0" style="-fx-background-color: #FFDE7A;">
          <children>
@@ -48,6 +49,28 @@
             <Button layoutX="72.0" layoutY="148.0" mnemonicParsing="false" style="-fx-background-color: #FFEAAC;" text="Back" />
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="217.0" layoutY="71.0" prefHeight="346.0" prefWidth="385.0" style="-fx-background-color: #FFEAAC;" />
+      <ScrollPane layoutX="215.0" layoutY="69.0" prefHeight="355.0" prefWidth="388.0" style="-fx-background-color: #FFEAAC;">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <AnchorPane prefHeight="143.0" prefWidth="388.0">
+                     <children>
+                        <ImageView fitHeight="131.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../../../Desktop/سنه%20تالته/secound%20section/software/istockphoto-475895644-1024x1024.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="180.0" layoutY="6.0" prefHeight="30.0" prefWidth="199.0" text="Street food resturant">
+                           <font>
+                              <Font name="System Bold Italic" size="20.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="296.0" layoutY="104.0" mnemonicParsing="false" text="Veiw resturant" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
    </children>
 </AnchorPane>
