@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="login" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #171717;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projects.software.restaurantns.LoginController">
+<BorderPane fx:id="login" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #171717;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projects.software.restaurantns.LoginController">
    <left>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #566374;" BorderPane.alignment="CENTER">
          <children>
@@ -30,7 +30,6 @@
    <right>
       <AnchorPane prefHeight="400.0" prefWidth="409.0" style="-fx-background-color: #505050;" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
             <ImageView fitHeight="77.0" fitWidth="102.0" layoutX="104.0" layoutY="63.0">
                <image>
                   <Image url="@../../../images/d.gif" />
@@ -57,7 +56,7 @@
                   <Font size="15.0" />
                </font>
             </Label>
-            <Button layoutX="115.0" layoutY="353.0" mnemonicParsing="false" onAction="#signUp" prefHeight="34.0" prefWidth="80.0" style="-fx-background-color: #505050;" text="sing up" textAlignment="CENTER" textFill="WHITE">
+            <Button layoutX="115.0" layoutY="353.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="80.0" style="-fx-background-color: #505050;" text="sing up" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="System Bold Italic" size="14.0" />
                </font>
@@ -67,7 +66,7 @@
                   <Font name="System Bold Italic" size="27.0" />
                </font>
             </Label>
-            <Button layoutX="288.0" layoutY="14.0" mnemonicParsing="false" onAction="#close" style="-fx-background-color: #505050;" text="x" textFill="WHITE">
+            <Button layoutX="288.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: #505050;" text="x" textFill="WHITE">
                <font>
                   <Font size="21.0" />
                </font>
