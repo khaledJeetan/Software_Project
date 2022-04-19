@@ -27,7 +27,7 @@
                </image>
             </ImageView>
             <Line endX="-12.600013732910156" layoutX="115.0" layoutY="48.0" startX="-100.0" />
-            <ImageView fitHeight="45.0" fitWidth="75.0" layoutX="113.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="45.0" fitWidth="75.0" layoutX="103.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../images/S.gif" />
                </image>
