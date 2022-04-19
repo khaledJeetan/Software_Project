@@ -53,11 +53,11 @@
         <content>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
                <children>
-                  <AnchorPane prefHeight="143.0" prefWidth="388.0">
+                  <AnchorPane prefHeight="117.0" prefWidth="390.0">
                      <children>
                         <ImageView fitHeight="131.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../../../../../Desktop/سنه%20تالته/secound%20section/software/istockphoto-475895644-1024x1024.jpg" />
+                              <Image url="@../../../images/A.jpg" />
                            </image>
                         </ImageView>
                         <Label layoutX="180.0" layoutY="6.0" prefHeight="30.0" prefWidth="199.0" text="Street food resturant">
@@ -65,7 +65,16 @@
                               <Font name="System Bold Italic" size="20.0" />
                            </font>
                         </Label>
-                        <Button layoutX="296.0" layoutY="104.0" mnemonicParsing="false" text="Veiw resturant" />
+                        <Button layoutX="296.0" layoutY="89.0" mnemonicParsing="false" text="Veiw resturant" />
+                        <Label layoutX="180.0" layoutY="41.0" prefHeight="18.0" prefWidth="103.0" text="open now" textFill="#0cc718">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="214.0" layoutY="81.0" text="Rafedia" />
+                        <Label layoutX="270.0" layoutY="63.0" text="Number of reviews" />
+                        <Line endX="257.79998779296875" endY="-0.399993896484375" layoutX="131.0" layoutY="116.0" startX="-130.99998474121094" startY="-0.399993896484375" />
+                        <Label layoutX="176.0" layoutY="81.0" text="Nablus" />
                      </children>
                   </AnchorPane>
                </children>
