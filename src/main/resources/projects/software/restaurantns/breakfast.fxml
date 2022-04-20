@@ -10,7 +10,6 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projects.software.restaurantns.Test">
    <children>
       <AnchorPane layoutX="284.0" layoutY="7.0" prefHeight="473.0" prefWidth="390.0">
@@ -100,9 +99,9 @@
                         <Font name="System Bold" size="13.0" />
                      </font>
                   </Label>
-                  <ImageView fitHeight="30.0" fitWidth="38.0" layoutY="162.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="25.0" fitWidth="28.0" layoutX="2.0" layoutY="165.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../images/vector-phone-icon-9.jpg" />
+                        <Image url="@../../../images/G.jpg" />
                      </image>
                   </ImageView>
                   <Label layoutX="3.0" layoutY="200.0" text="Work houre:">
