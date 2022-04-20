@@ -5,23 +5,20 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.Background;
-import javafx.scene.layout.BackgroundFill;
 import javafx.scene.paint.Color;
 
 import java.sql.*;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 
 public class SingupController {
-    private  ReviewSystem main = new ReviewSystem();
+    private final ReviewSystem main = new ReviewSystem();
     @FXML
     private TextField username;
     @FXML
-    private TextField newpassword;
+    private PasswordField newpassword;
     @FXML
-    private TextField confirmpassword;
+    private PasswordField confirmpassword;
     @FXML
     private Label msg;
 

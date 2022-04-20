@@ -1,6 +1,8 @@
 package projects.software.restaurantns;
 
-    public final class UserHolder {
+import model.User;
+
+public final class UserHolder {
 
         private User user;
         private final static UserHolder INSTANCE = new UserHolder();

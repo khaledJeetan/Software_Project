@@ -4,13 +4,14 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import model.User;
 
 import java.sql.*;
 
 public class LoginController {
 
     private final ReviewSystem main = new ReviewSystem();
-    private  User user;
+    private User user;
 
     @FXML
     private TextField username;

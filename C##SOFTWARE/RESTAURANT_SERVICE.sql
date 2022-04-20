@@ -1,4 +1,4 @@
-create table RESTAURANTS_SERVICE
+create table RESTAURANT_SERVICE
 (
     RESTAURANT_ID NUMBER not null
         constraint RESTAURANTS_ID_FK

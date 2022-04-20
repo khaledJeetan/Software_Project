@@ -8,15 +8,14 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.image.WritableImage;
-import javafx.scene.layout.AnchorPane;
 import javafx.stage.FileChooser;
 import javafx.embed.swing.SwingFXUtils;
+import model.User;
+
 import javax.imageio.ImageIO;
-import javax.imageio.ImageReader;
 import java.awt.image.BufferedImage;
 
 import java.io.*;
-import java.sql.Blob;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -29,8 +28,6 @@ public class ProfileController {
     User user = UserHolder.getInstance().getUser();
     @FXML
     private Label name;
-    @FXML
-    private AnchorPane afterLogin;
     @FXML
     private PieChart pieChart;
     @FXML
@@ -69,11 +66,7 @@ public class ProfileController {
             WritableImage image = SwingFXUtils.toFXImage(bufferedImage, null);
             imageView.setImage(image);
 //            imageView.setFitWidth(200);
-//            imageView.setFitHeight(200);
-//            imageView.scaleXProperty();
-//            imageView.scaleYProperty();
-//            imageView.setSmooth(true);
-//            imageView.setCache(true);
+
             FileInputStream fin = new FileInputStream(file);
             ByteArrayOutputStream bos = new ByteArrayOutputStream();
             byte[] buf = new byte[1024];
@@ -90,7 +83,7 @@ public class ProfileController {
     }
 
     @FXML
-    private void addPhoto() throws IOException {
+    private void addPhoto() {
 
         try {
 
@@ -123,12 +116,14 @@ public class ProfileController {
             personalPhoto.setImage(photo);
         }
 
-        ObservableList<PieChart.Data> chartData =
-                FXCollections.observableArrayList(
-                        new PieChart.Data("Users", DbWraper.userCount() ),
-                        new PieChart.Data("Restaurants", DbWraper.restaurantCount()));
-        pieChart.setData(chartData);
-        pieChart.setStartAngle(90);
+        if(pieChart != null) {
+            ObservableList<PieChart.Data> chartData =
+                    FXCollections.observableArrayList(
+                            new PieChart.Data("Users", DbWraper.userCount()),
+                            new PieChart.Data("Restaurants", DbWraper.restaurantCount()));
+            pieChart.setData(chartData);
+            pieChart.setStartAngle(90);
+        }
     }
 
     @FXML

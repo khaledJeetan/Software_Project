@@ -15,4 +15,6 @@ module projects.softwareengineering.restaurantms {
 
     opens projects.software.restaurantns to javafx.fxml;
     exports projects.software.restaurantns;
+    exports model;
+    opens model to javafx.fxml;
 }

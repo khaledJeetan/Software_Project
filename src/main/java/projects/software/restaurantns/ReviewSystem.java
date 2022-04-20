@@ -33,9 +33,11 @@ public class ReviewSystem extends Application {
     public void changeScene(String fxml) {
         try {
 
-            Parent root = FXMLLoader.load(getClass().getResource(fxml));
-            this.stage.getScene().setRoot(root);
-            this.stage.sizeToScene();
+            if(!fxml.isEmpty()) {
+                Parent root = FXMLLoader.load(getClass().getResource(fxml));
+                this.stage.getScene().setRoot(root);
+                this.stage.sizeToScene();
+            }
         }
         catch (Exception e){
             e.printStackTrace();
@@ -52,6 +54,5 @@ public class ReviewSystem extends Application {
 
     public static void main(String[] args) throws SQLException {
         launch();
-        con.close();
     }
 }

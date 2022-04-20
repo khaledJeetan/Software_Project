@@ -1,9 +1,8 @@
-package projects.software.restaurantns;
+package model;
 
 import javafx.scene.image.Image;
 
 import java.io.InputStream;
-import java.sql.Blob;
 import java.sql.Timestamp;
 
 public class User {
@@ -84,8 +83,8 @@ public class User {
 
     public void setPhoto( InputStream photo) {
         if(photo != null) {
-            Image img = new Image(photo);
-            this.photo = img;
+            Image image = new Image(photo);
+            this.photo = image;
         }
     }
 
