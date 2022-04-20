@@ -34,7 +34,6 @@
             <Font name="System Italic" size="20.0" />
          </font></Label>
       <ComboBox layoutX="206.0" layoutY="145.0" prefWidth="150.0" promptText="select city" />
-      <ComboBox layoutX="206.0" layoutY="202.0" prefWidth="150.0" promptText="Choose Region" />
       <Label layoutX="9.0" layoutY="266.0" text="Has Delivery" textFill="#eceaea">
          <font>
             <Font name="System Italic" size="20.0" />
@@ -66,5 +65,6 @@
          </font>
       </Label>
       <TextField layoutX="200.0" layoutY="329.0" promptText="Phone number" />
+      <TextField layoutX="206.0" layoutY="202.0" promptText="Enter location" />
    </children>
 </AnchorPane>
