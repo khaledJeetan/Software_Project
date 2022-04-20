@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projects.software.restaurantns.RestaurantIemController">
+   <children>
+      <ImageView fx:id="restaurantImage" fitHeight="131.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/A.jpg" />
+         </image>
+      </ImageView>
+      <Label fx:id="restaurantName" layoutX="180.0" layoutY="6.0" text="Street food resturant">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+         <effect>
+            <Blend />
+         </effect>
+      </Label>
+      <Button layoutX="296.0" layoutY="89.0" mnemonicParsing="false" onAction="#viewRestaurant" text="Veiw resturant" />
+      <Label layoutX="180.0" layoutY="41.0" text="open now" textFill="#0cc718">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="Rlocation" layoutX="214.0" layoutY="81.0" text="Rafedia" />
+      <Label fx:id="reviewNumber" layoutX="270.0" layoutY="63.0" text="Number of reviews" />
+      <Line endX="257.79998779296875" endY="-0.399993896484375" layoutX="131.0" layoutY="116.0" startX="-130.99998474121094" startY="-0.399993896484375" />
+      <Label fx:id="city" layoutX="176.0" layoutY="81.0" text="Nablus" />
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</AnchorPane>

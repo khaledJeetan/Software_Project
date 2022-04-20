@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projects.software.restaurantns.OptionsController">
+   <children>
+      <AnchorPane layoutY="-2.0" prefHeight="410.0" prefWidth="220.0" style="-fx-background-color: #9BA5DD;">
+         <children>
+            <ImageView fitHeight="408.0" fitWidth="220.0" layoutX="14.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/b.jpeg" />
+               </image>
+            </ImageView>
+            <Button layoutX="30.0" layoutY="302.0" mnemonicParsing="false" onAction="#findRestaurant" prefHeight="62.0" prefWidth="159.0" style="-fx-background-color: #9BA5DD;" text="Find a restaurant">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Button>
+            <Line endX="131.5999755859375" endY="3.0517578125E-5" layoutX="46.0" layoutY="349.0" startX="-8.399993896484375" startY="3.0517578125E-5" />
+            <Line endX="103.0" endY="3.0517578125E-5" layoutX="69.0" layoutY="315.0" startX="-26.600006103515625" startY="3.0517578125E-5" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="220.0" layoutY="4.0" prefHeight="400.0" prefWidth="382.0" style="-fx-background-color: #EFEEF3;">
+         <children>
+            <ImageView fitHeight="343.0" fitWidth="393.0" layoutX="-1.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/obtion.png" />
+               </image>
+            </ImageView>
+            <Button layoutY="338.0" mnemonicParsing="false" onAction="#openMap" prefHeight="62.0" prefWidth="388.0" style="-fx-background-color: #EFEEF3;" text="Open map">
+               <font>
+                  <Font name="System Italic" size="18.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="55.0" fitWidth="47.0" layoutX="168.0" layoutY="218.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/c.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="22.0" layoutY="100.0" mnemonicParsing="false" onAction="#breakfast" prefHeight="26.0" prefWidth="82.0" style="-fx-background-color: #EFEEF3;" text="Breakfast" textAlignment="CENTER" />
+            <Button layoutX="154.0" layoutY="100.0" mnemonicParsing="false" onAction="#launch" prefHeight="26.0" prefWidth="66.0" style="-fx-background-color: #EFEEF3;" text="Lunch" />
+            <Button layoutX="286.0" layoutY="100.0" mnemonicParsing="false" onAction="#dinner" prefHeight="26.0" prefWidth="66.0" style="-fx-background-color: #EFEEF3;" text="Dinner" />
+            <Button layoutX="23.0" layoutY="271.0" mnemonicParsing="false" onAction="#coffeeTea" prefHeight="26.0" prefWidth="81.0" style="-fx-background-color: #EFEEF3;" text="Coffee&amp;Tea" />
+            <Button layoutX="145.0" layoutY="272.0" mnemonicParsing="false" onAction="#sweet" prefHeight="26.0" prefWidth="82.0" style="-fx-background-color: #EFEEF3;" text="Sweets" />
+            <Button layoutX="279.0" layoutY="272.0" mnemonicParsing="false" onAction="#healthyFood" prefHeight="26.0" prefWidth="90.0" style="-fx-background-color: #EFEEF3;" text="Healthy food" />
+            <Label layoutX="286.0" layoutY="215.0" prefHeight="55.0" prefWidth="66.0" style="-fx-background-color: #EFEEF3;" />
+            <ImageView fitHeight="55.0" fitWidth="53.0" layoutX="298.0" layoutY="216.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/f.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="417.0" prefWidth="603.0" style="-fx-background-color: #0B5189;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projects.software.restaurantns.ServiceController">
+   <children>
+      <AnchorPane prefHeight="71.0" prefWidth="603.0" style="-fx-background-color: #074270;">
+         <children>
+            <Label layoutX="14.0" layoutY="16.0" prefHeight="38.0" prefWidth="121.0" text="Dinner" textFill="#b49d1d">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <TextField layoutX="399.0" layoutY="23.0" promptText="search" />
+            <Button layoutX="548.0" layoutY="23.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="38.0" />
+            <ImageView fitHeight="18.0" fitWidth="26.0" layoutX="559.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/j.png" />
+               </image>
+            </ImageView>
+            <Line endX="-32.600013732910156" layoutX="115.0" layoutY="48.0" startX="-100.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="71.0" prefHeight="346.0" prefWidth="198.0" style="-fx-background-color: #074270;">
+         <children>
+            <ImageView fitHeight="297.0" fitWidth="162.0" layoutX="20.0" layoutY="178.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/giphy (3).gif" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="182.0" fitWidth="200.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/T.jpeg" />
+               </image>
+            </ImageView>
+            <Button layoutX="72.0" layoutY="148.0" mnemonicParsing="false" onAction="#back" style="-fx-background-color: #0b5189;" text="Back" textFill="#a48224" />
+         </children>
+      </AnchorPane>
+      <ScrollPane layoutX="202.0" layoutY="71.0" pannable="true" prefHeight="346.0" prefWidth="402.0" style="-fx-background-color: #0b5189;">
+         <content>
+            <Button mnemonicParsing="false" prefHeight="94.0" prefWidth="406.0" text="Button" />
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>
