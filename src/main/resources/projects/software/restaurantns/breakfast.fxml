@@ -1,73 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.shape.Line?>
-<?import javafx.scene.text.Font?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="464.0" prefWidth="768.0" style="-fx-background-color: #FFEAAC;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projects.software.restaurantns.ServiceController">
-   <children>
-      <AnchorPane prefHeight="71.0" prefWidth="768.0" style="-fx-background-color: #FFDE7A;">
-         <children>
-            <Label layoutX="14.0" layoutY="16.0" prefHeight="38.0" prefWidth="121.0" text="Breakfast">
-               <font>
-                  <Font name="System Bold Italic" size="20.0" />
-               </font>
-            </Label>
-            <TextField layoutX="399.0" layoutY="23.0" promptText="search" />
-            <Button layoutX="548.0" layoutY="23.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="38.0" />
-            <ImageView fitHeight="18.0" fitWidth="26.0" layoutX="559.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../images/j.png" />
-               </image>
-            </ImageView>
-            <Line endX="-12.600013732910156" layoutX="115.0" layoutY="48.0" startX="-100.0" />
-            <ImageView fitHeight="45.0" fitWidth="75.0" layoutX="103.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../images/S.gif" />
-               </image>
-            </ImageView>
-         </children>
-      </AnchorPane>
-      <AnchorPane layoutY="71.0" prefHeight="431.0" prefWidth="217.0" style="-fx-background-color: #FFDE7A;">
-         <children>
-            <ImageView fitHeight="217.0" fitWidth="217.0" layoutY="184.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../images/anime-food.gif" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="182.0" fitWidth="200.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../images/q.jpeg" />
-               </image>
-            </ImageView>
-            <Button layoutX="72.0" layoutY="148.0" mnemonicParsing="false" onAction="#back" style="-fx-background-color: #FFEAAC;" text="Back" />
-         </children>
-      </AnchorPane>
-      <VBox layoutX="217.0" layoutY="71.0" prefHeight="431.0" prefWidth="551.0">
-         <children>
-            <ScrollPane fitToWidth="true" prefHeight="450.0" prefWidth="551.0" style="-fx-background-color: #FFEAAC;">
-               <content>
-                  <GridPane fx:id="grid" prefHeight="0.0" prefWidth="0.0" vgap="10.0">
-                     <rowConstraints>
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                     </rowConstraints>
-                     <padding>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                     </padding>
-                  </GridPane>
-               </content>
-            </ScrollPane>
-         </children>
-      </VBox>
-   </children>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="projects.software.restaurantns.Test"
+            prefHeight="400.0" prefWidth="600.0">
+
 </AnchorPane>
