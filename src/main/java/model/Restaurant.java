@@ -40,7 +40,7 @@ public class Restaurant {
         this.address = address;
     }
 
-    public boolean isHasDelivery() {
+    public boolean HasDelivery() {
         return hasDelivery;
     }
 
