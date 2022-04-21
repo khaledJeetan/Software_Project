@@ -14,14 +14,14 @@
    <children>
       <Pane layoutY="-2.0" prefHeight="143.0" prefWidth="600.0" style="-fx-border-color: #ADD8E6;">
          <children>
-            <TextField layoutX="134.0" layoutY="41.0" prefHeight="25.0" prefWidth="332.0" />
+            <TextField layoutX="134.0" layoutY="41.0" prefHeight="25.0" prefWidth="332.0" promptText="Find a restaurant" />
             <Button layoutX="466.0" layoutY="41.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="38.0" />
             <ImageView fitHeight="25.0" fitWidth="38.0" layoutX="473.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../../../../../../Downloads/magnifying-glass.png" />
                </image>
             </ImageView>
-            <TextField layoutX="134.0" layoutY="87.0" prefHeight="27.0" prefWidth="332.0" />
+            <TextField layoutX="134.0" layoutY="87.0" prefHeight="27.0" prefWidth="332.0" promptText="Find a location near me" />
             <Button layoutX="466.0" layoutY="88.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="38.0" />
             <ImageView fitHeight="25.0" fitWidth="26.0" layoutX="473.0" layoutY="88.0" pickOnBounds="true" preserveRatio="true">
                <image>
