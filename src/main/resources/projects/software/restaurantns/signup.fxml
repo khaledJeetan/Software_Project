@@ -11,34 +11,34 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #1C89E0;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projects.software.restaurantns.SingupController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #B6B6B6;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projects.software.restaurantns.LoginController">
    <children>
-      <Pane layoutY="108.0" prefHeight="399.0" prefWidth="600.0" style="-fx-background-color: #1C89E0;">
+      <Pane layoutY="108.0" prefHeight="399.0" prefWidth="600.0" style="-fx-background-color: #B6B6B6;">
          <children>
-            <TextField fx:id="username" layoutX="247.0" layoutY="51.0" prefHeight="33.0" prefWidth="306.0" promptText="EX: Alex" style="-fx-background-color: #ADD8E6; -fx-background-insets: 1; -fx-background-radius: 20;" />
+            <TextField layoutX="247.0" layoutY="51.0" prefHeight="33.0" prefWidth="306.0" style="-fx-background-color: #E0E0E0; -fx-background-insets: 1; -fx-background-radius: 20;" />
             <Label layoutX="40.0" layoutY="54.0" text="User Name" textFill="WHITE">
                <font>
-                  <Font size="18.0" />
+                  <Font name="System Bold" size="18.0" />
                </font>
             </Label>
             <Label layoutX="40.0" layoutY="153.0" text="New Password" textFill="WHITE">
                <font>
-                  <Font size="18.0" />
+                  <Font name="System Bold" size="18.0" />
                </font>
             </Label>
             <Separator layoutX="44.0" layoutY="12.0" opacity="0.15" prefHeight="5.0" prefWidth="519.0" />
-            <Label layoutX="40.0" layoutY="239.0" text="Confirm Password" textFill="WHITE">
+            <Label layoutX="40.0" layoutY="239.0" prefHeight="27.0" prefWidth="183.0" text="Confirm Password" textFill="WHITE">
                <font>
-                  <Font size="18.0" />
+                  <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <Button layoutX="400.0" layoutY="331.0" mnemonicParsing="false" onAction="#signup" prefHeight="42.0" prefWidth="158.0" style="-fx-background-color: #1C89E0; -fx-border-color: #505050;" text="Create Account" textFill="#ddd9d9">
+            <Button layoutX="400.0" layoutY="331.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="158.0" style="-fx-background-color: #505050; -fx-border-color: #505050;" text="Create Account" textFill="#ddd9d9">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <PasswordField fx:id="newpassword" layoutX="247.0" layoutY="150.0" prefHeight="33.0" prefWidth="306.0" style="-fx-background-color: #ADD8E6; -fx-background-insets: 1; -fx-background-radius: 20;" />
-            <PasswordField fx:id="confirmpassword" layoutX="247.0" layoutY="236.0" prefHeight="33.0" prefWidth="306.0" style="-fx-background-color: #ADD8E6; -fx-background-insets: 1; -fx-background-radius: 20;" />
+            <PasswordField layoutX="247.0" layoutY="150.0" prefHeight="33.0" prefWidth="306.0" style="-fx-background-color: #E0E0E0; -fx-background-insets: 1; -fx-background-radius: 20;" />
+            <PasswordField layoutX="247.0" layoutY="236.0" prefHeight="33.0" prefWidth="306.0" style="-fx-background-color: #E0E0E0; -fx-background-insets: 1; -fx-background-radius: 20;" />
          </children>
       </Pane>
       <ImageView fitHeight="134.0" fitWidth="200.0" layoutX="23.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
@@ -46,10 +46,5 @@
             <Image url="@../../../images/sign-up.gif" />
          </image>
       </ImageView>
-      <Label fx:id="msg" layoutX="181.0" layoutY="42.0" prefHeight="62.0" prefWidth="412.0" style="-fx-background-color: #f7d7da;" textFill="#7d2f33" visible="false">
-         <font>
-            <Font name="System Bold Italic" size="15.0" />
-         </font>
-      </Label>
    </children>
 </AnchorPane>
