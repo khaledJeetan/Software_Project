@@ -3,9 +3,12 @@ package projects.software.restaurantns;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
+import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
+import javafx.scene.paint.Color;
 import model.RestaurantService;
-
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -16,10 +19,28 @@ public class ServiceController {
 
     @FXML
     private URL location;
-
-
     @FXML
     private GridPane grid;
+    @FXML
+    private ImageView restaurantImage;
+    @FXML
+    private Label servicePrice;
+    @FXML
+    private Label restaurantStatus;
+    @FXML
+    private Label restaurantCity;
+    @FXML
+    private Label restaurantLocation;
+    @FXML
+    private Label restaurantName;
+    @FXML
+    private Label restaurantPhone;
+    @FXML
+    private Label restaurantDelivery;
+    @FXML
+    private Label restaurantWorkingTime;
+    @FXML
+    private Label restaurantNotes;
 
     private List<RestaurantService> restaurantServices = new ArrayList<>();
 
@@ -35,15 +56,41 @@ public class ServiceController {
 
     }
 
+    @FXML
+    public void addReview(){
+
+    }
+    @FXML
+    public void addToFavorite(){
+
+    }
+    @FXML
+    public void seeMenu(){}
+
+    private void setData(RestaurantService restaurantService){
+        Image image = restaurantService.getRestaurant().getCoverPhoto();
+        if(image != null)
+        restaurantImage.setImage(image);
+        servicePrice.setText("Price: " + String.valueOf(restaurantService.getPrice()) + "$");
+        restaurantName.setText(restaurantService.getRestaurant().getName());
+        restaurantCity.setText(restaurantService.getRestaurant().getLocation().getCity());
+        restaurantLocation.setText(restaurantService.getRestaurant().getLocation().getLocation());
+        if (!restaurantService.getRestaurant().HasDelivery()) {
+            restaurantDelivery.setText("Delivery Not Available");
+            restaurantDelivery.setTextFill(Color.RED);
+        }
+        restaurantPhone.setText(String.valueOf(restaurantService.getRestaurant().getPhone()));
+
+
+    }
+
     private void showRestaurants(List<RestaurantService> restaurants) {
 
         myListener = new MyListener() {
 
             @Override
             public void onClickListener(RestaurantService restaurantService) {
-
-                main.changeScene("options.fxml");
-
+                setData(restaurantService);
             }
         };
 
