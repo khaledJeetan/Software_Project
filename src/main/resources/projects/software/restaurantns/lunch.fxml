@@ -9,7 +9,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="402.0" prefWidth="601.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projects.software.restaurantns.Lunch">
+<AnchorPane prefHeight="402.0" prefWidth="601.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projects.software.restaurantns.ServiceController">
    <children>
       <AnchorPane prefHeight="71.0" prefWidth="602.0" style="-fx-background-color: #8BC8F9;">
          <children>
@@ -40,7 +40,7 @@
                   <Image url="@../../../images/z.jpeg" />
                </image>
             </ImageView>
-            <Button layoutX="80.0" layoutY="144.0" mnemonicParsing="false" style="-fx-background-color: #ACD8FB;" text="Back" />
+            <Button layoutX="80.0" layoutY="144.0" mnemonicParsing="false" onAction="#back" style="-fx-background-color: #ACD8FB;" text="Back" />
          </children>
       </AnchorPane>
       <AnchorPane layoutX="198.0" layoutY="70.0" prefHeight="342.0" prefWidth="406.0" style="-fx-background-color: #ACD8FB;" />
