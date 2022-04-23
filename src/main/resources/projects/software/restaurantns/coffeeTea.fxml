@@ -23,6 +23,113 @@
                      </font>
                   </Label>
                   <Line endX="298.0" layoutX="101.0" layoutY="56.0" startX="-100.0" />
+                  <Pane layoutX="141.0" layoutY="-27.0" prefHeight="518.0" prefWidth="355.0" style="-fx-background-color: #7C7C7C;">
+                     <children>
+                        <ImageView fitHeight="200.0" fitWidth="378.0" layoutX="-2.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/h.gif" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="84.0" layoutY="211.0" prefHeight="35.0" prefWidth="174.0" text="Sham cafe">
+                           <font>
+                              <Font name="System Bold Italic" size="24.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="12.0" layoutY="472.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="130.0" text="Add to favorite" />
+                        <Button layoutX="193.0" layoutY="472.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="130.0" text="View Resturant" />
+                        <Label layoutX="12.0" layoutY="259.0" prefHeight="43.0" prefWidth="148.0" text="Add a comment">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="171.0" layoutY="259.0" prefHeight="43.0" prefWidth="174.0" promptText="Add a comment hear" />
+                        <Label layoutX="6.0" layoutY="296.0" prefHeight="43.0" prefWidth="130.0" text=" Add Rating :">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <RadioButton layoutX="6.0" layoutY="359.0" mnemonicParsing="false" />
+                        <ImageView fitHeight="18.0" fitWidth="30.0" layoutX="41.0" layoutY="330.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/640px-Golden_star.svg.png" />
+                           </image>
+                        </ImageView>
+                        <RadioButton layoutX="6.0" layoutY="391.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="6.0" layoutY="420.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="6.0" layoutY="447.0" mnemonicParsing="false" />
+                        <RadioButton layoutX="6.0" layoutY="330.0" mnemonicParsing="false" />
+                        <ImageView fitHeight="18.0" fitWidth="30.0" layoutX="62.0" layoutY="364.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/640px-Golden_star.svg.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="18.0" fitWidth="30.0" layoutX="43.0" layoutY="391.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/640px-Golden_star.svg.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="18.0" fitWidth="30.0" layoutX="43.0" layoutY="364.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/640px-Golden_star.svg.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="18.0" fitWidth="30.0" layoutX="59.0" layoutY="391.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/640px-Golden_star.svg.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="18.0" fitWidth="30.0" layoutX="43.0" layoutY="415.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/640px-Golden_star.svg.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="18.0" fitWidth="30.0" layoutX="41.0" layoutY="447.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/640px-Golden_star.svg.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="18.0" fitWidth="30.0" layoutX="62.0" layoutY="415.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/640px-Golden_star.svg.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="18.0" fitWidth="30.0" layoutX="59.0" layoutY="447.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/640px-Golden_star.svg.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="18.0" fitWidth="30.0" layoutX="77.0" layoutY="391.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/640px-Golden_star.svg.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="18.0" fitWidth="30.0" layoutX="77.0" layoutY="415.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/640px-Golden_star.svg.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="18.0" fitWidth="30.0" layoutX="92.0" layoutY="415.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/640px-Golden_star.svg.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="18.0" fitWidth="30.0" layoutX="77.0" layoutY="447.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/640px-Golden_star.svg.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="18.0" fitWidth="30.0" layoutX="92.0" layoutY="447.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/640px-Golden_star.svg.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="18.0" fitWidth="30.0" layoutX="111.0" layoutY="447.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/640px-Golden_star.svg.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
                </children>
             </AnchorPane>
             <AnchorPane prefHeight="490.0" prefWidth="286.0" style="-fx-background-color: #B6B6B6;">
@@ -184,113 +291,6 @@
                   </Label>
                   <Button layoutX="12.0" layoutY="472.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="130.0" text="Add to favorite" />
                   <Button layoutX="193.0" layoutY="472.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="130.0" text="Rating&amp;Review" />
-                  <Pane layoutX="142.0" layoutY="-176.0" prefHeight="518.0" prefWidth="355.0" style="-fx-background-color: #7C7C7C;">
-                     <children>
-                        <ImageView fitHeight="200.0" fitWidth="378.0" layoutX="-2.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../images/h.gif" />
-                           </image>
-                        </ImageView>
-                        <Label layoutX="84.0" layoutY="211.0" prefHeight="35.0" prefWidth="174.0" text="Sham cafe">
-                           <font>
-                              <Font name="System Bold Italic" size="24.0" />
-                           </font>
-                        </Label>
-                        <Button layoutX="12.0" layoutY="472.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="130.0" text="Add to favorite" />
-                        <Button layoutX="193.0" layoutY="472.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="130.0" text="View Resturant" />
-                        <Label layoutX="12.0" layoutY="259.0" prefHeight="43.0" prefWidth="148.0" text="Add a comment">
-                           <font>
-                              <Font name="System Bold" size="18.0" />
-                           </font>
-                        </Label>
-                        <TextField layoutX="171.0" layoutY="259.0" prefHeight="43.0" prefWidth="174.0" promptText="Add a comment hear" />
-                        <Label layoutX="6.0" layoutY="296.0" prefHeight="43.0" prefWidth="130.0" text=" Add Rating :">
-                           <font>
-                              <Font name="System Bold" size="18.0" />
-                           </font>
-                        </Label>
-                        <RadioButton layoutX="6.0" layoutY="359.0" mnemonicParsing="false" />
-                        <ImageView fitHeight="18.0" fitWidth="30.0" layoutX="41.0" layoutY="330.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../images/640px-Golden_star.svg.png" />
-                           </image>
-                        </ImageView>
-                        <RadioButton layoutX="6.0" layoutY="391.0" mnemonicParsing="false" />
-                        <RadioButton layoutX="6.0" layoutY="420.0" mnemonicParsing="false" />
-                        <RadioButton layoutX="6.0" layoutY="447.0" mnemonicParsing="false" />
-                        <RadioButton layoutX="6.0" layoutY="330.0" mnemonicParsing="false" />
-                        <ImageView fitHeight="18.0" fitWidth="30.0" layoutX="62.0" layoutY="364.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../images/640px-Golden_star.svg.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="18.0" fitWidth="30.0" layoutX="43.0" layoutY="391.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../images/640px-Golden_star.svg.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="18.0" fitWidth="30.0" layoutX="43.0" layoutY="364.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../images/640px-Golden_star.svg.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="18.0" fitWidth="30.0" layoutX="59.0" layoutY="391.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../images/640px-Golden_star.svg.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="18.0" fitWidth="30.0" layoutX="43.0" layoutY="415.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../images/640px-Golden_star.svg.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="18.0" fitWidth="30.0" layoutX="41.0" layoutY="447.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../images/640px-Golden_star.svg.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="18.0" fitWidth="30.0" layoutX="62.0" layoutY="415.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../images/640px-Golden_star.svg.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="18.0" fitWidth="30.0" layoutX="59.0" layoutY="447.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../images/640px-Golden_star.svg.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="18.0" fitWidth="30.0" layoutX="77.0" layoutY="391.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../images/640px-Golden_star.svg.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="18.0" fitWidth="30.0" layoutX="77.0" layoutY="415.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../images/640px-Golden_star.svg.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="18.0" fitWidth="30.0" layoutX="92.0" layoutY="415.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../images/640px-Golden_star.svg.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="18.0" fitWidth="30.0" layoutX="77.0" layoutY="447.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../images/640px-Golden_star.svg.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="18.0" fitWidth="30.0" layoutX="92.0" layoutY="447.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../images/640px-Golden_star.svg.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="18.0" fitWidth="30.0" layoutX="111.0" layoutY="447.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../images/640px-Golden_star.svg.png" />
-                           </image>
-                        </ImageView>
-                     </children>
-                  </Pane>
                </children>
             </Pane>
          </children>
