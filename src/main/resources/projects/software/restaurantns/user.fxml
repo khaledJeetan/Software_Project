@@ -54,7 +54,7 @@
             <Font name="Monospaced Bold Italic" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="119.0" layoutY="304.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="196.0" text="Rating&amp;Cimment">
+      <Button layoutX="119.0" layoutY="304.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="196.0" text="Rating&amp;Comment">
          <font>
             <Font name="Monospaced Bold Italic" size="18.0" />
          </font>
