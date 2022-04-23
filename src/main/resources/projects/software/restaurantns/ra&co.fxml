@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="496.0" prefWidth="704.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projects.software.restaurantns.RaCo">
+   <children>
+      <ImageView fitHeight="189.0" fitWidth="212.0" layoutY="78.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/star-rating-review-comment-single-isolated-icon-with-outline-style-vector-design-illustration-2FKH9M7.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="14.0" layoutY="14.0" prefHeight="50.0" prefWidth="238.0" text="Rating&amp;Comment">
+         <font>
+            <Font name="Monospaced Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="252.0" layoutY="78.0" prefHeight="166.0" prefWidth="376.0">
+         <children>
+            <ScrollBar layoutX="355.0" orientation="VERTICAL" prefHeight="166.0" prefWidth="14.0" />
+            <AnchorPane layoutY="36.0" prefHeight="50.0" prefWidth="347.0">
+               <children>
+                  <Line endX="100.0" endY="14.0" layoutX="73.0" layoutY="-13.0" startX="99.9999771118164" startY="67.20001220703125" />
+                  <Label layoutX="5.0" layoutY="5.0" prefHeight="50.0" prefWidth="152.0" text="Sham Resturant">
+                     <font>
+                        <Font name="Monospaced Italic" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="181.0" layoutY="3.0" prefHeight="50.0" prefWidth="152.0" text="****" />
+               </children>
+            </AnchorPane>
+            <Label layoutX="14.0" prefHeight="36.0" prefWidth="141.0" text="Resturant Name">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="188.0" layoutY="-4.0" prefHeight="36.0" prefWidth="141.0" text="Rating">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="55.0" layoutY="282.0" prefHeight="166.0" prefWidth="594.0">
+         <children>
+            <ScrollBar layoutX="573.0" orientation="VERTICAL" prefHeight="166.0" prefWidth="14.0" />
+            <AnchorPane layoutX="14.0" layoutY="54.0" prefHeight="57.0" prefWidth="553.0">
+               <children>
+                  <Line endX="100.0" endY="14.0" layoutX="95.0" layoutY="-12.0" startX="99.9999771118164" startY="67.20001220703125" />
+                  <Label layoutY="6.0" prefHeight="50.0" prefWidth="183.0" text="Sham Resturant">
+                     <font>
+                        <Font name="Monospaced Italic" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="210.0" prefHeight="55.0" prefWidth="315.0" text="good">
+                     <font>
+                        <Font name="Monospaced Italic" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <Label layoutX="21.0" layoutY="7.0" prefHeight="36.0" prefWidth="141.0" text="Resturant Name">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="236.0" layoutY="7.0" prefHeight="36.0" prefWidth="141.0" text="Comment">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Button layoutX="14.0" layoutY="455.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="94.0" text="Back">
+         <font>
+            <Font name="Monospaced Bold Italic" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

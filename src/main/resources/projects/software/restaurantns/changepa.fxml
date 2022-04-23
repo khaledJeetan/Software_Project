@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="514.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projects.software.restaurantns.RCoftheuser">
+   <children>
+      <Label layoutX="159.0" layoutY="31.0" prefHeight="44.0" prefWidth="356.0" text="Change Password" textFill="#6b6b69">
+         <font>
+            <Font name="Monospaced Bold Italic" size="36.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/5498115.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="8.0" layoutY="277.0" prefHeight="44.0" prefWidth="267.0" text="Confirmation Password :" textFill="#1e1e1eeb">
+         <font>
+            <Font name="Monospaced Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="56.0" layoutY="156.0" prefHeight="44.0" prefWidth="172.0" text="Old Password :" textFill="#1e1e1e">
+         <font>
+            <Font name="Monospaced Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="56.0" layoutY="219.0" prefHeight="44.0" prefWidth="172.0" text="New Password :" textFill="#1e1e1e">
+         <font>
+            <Font name="Monospaced Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="237.0" layoutY="329.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="113.0" text="Change" textFill="#6b6b69">
+         <font>
+            <Font name="Monospaced Bold Italic" size="18.0" />
+         </font>
+      </Button>
+      <PasswordField layoutX="275.0" layoutY="165.0" />
+      <PasswordField layoutX="275.0" layoutY="228.0" />
+      <PasswordField layoutX="275.0" layoutY="286.0" />
+      <Button layoutX="14.0" layoutY="359.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="94.0" text="Back">
+         <font>
+            <Font name="Monospaced Bold Italic" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
