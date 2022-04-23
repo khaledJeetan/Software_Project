@@ -11,15 +11,9 @@ public class OptionsController {
         main.changeScene("mainscreen.fxml");
     }
 
-    @FXML
-    public  void launch(){
-        main.changeScene("lunch.fxml");
-    }
 
-    @FXML
-    public void dinner(){
-        main.changeScene("dinner.fxml");
-    }
+
+
 
     @FXML
     public void coffeeTea(){
@@ -29,10 +23,7 @@ public class OptionsController {
     public void sweet(){
         main.changeScene("sweets.fxml");
     }
-    @FXML
-    public void healthyFood(){
-        main.changeScene("healthyFood.fxml");
-    }
+
 
     @FXML
     public void openMap(){}
