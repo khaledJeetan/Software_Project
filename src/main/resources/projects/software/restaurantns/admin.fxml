@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="afterLogin" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="740.0" prefWidth="1075.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projects.software.restaurantns.ProfileController">
+<AnchorPane fx:id="afterLogin" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="740.0" prefWidth="1075.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projects.software.restaurantns.ProfileController">
    <children>
       <SplitPane dividerPositions="0.2087604846225536" layoutX="69.0" layoutY="267.0" prefHeight="740.0" prefWidth="1075.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
@@ -29,7 +29,7 @@
                                     <Insets left="25.0" />
                                  </VBox.margin>
                                  <image>
-                                    <Image url="@../../../images/profileImage.jpg" />
+                                    <Image url="@../../../images/Admin-designstyle-pastel-m.png" />
                                  </image>
                               </ImageView>
                               <Label fx:id="name" prefHeight="40.0" prefWidth="146.0">

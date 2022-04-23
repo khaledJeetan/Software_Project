@@ -8,7 +8,7 @@ public class OptionsController {
 
     @FXML
     public void breakfast(){
-        main.changeScene("breakfast.fxml");
+        main.changeScene("mainscreen.fxml");
     }
 
     @FXML
