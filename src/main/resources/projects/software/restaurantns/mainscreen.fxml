@@ -135,6 +135,12 @@
                   </ImageView>
                </children>
             </Pane>
+            <Button layoutX="581.0" layoutY="13.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="54.0" />
+            <ImageView fitHeight="25.0" fitWidth="35.0" layoutX="596.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/640px-Windows_Settings_app_icon.png" />
+               </image>
+            </ImageView>
          </children>
       </Pane>
    </children>
