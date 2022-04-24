@@ -1,6 +1,7 @@
 package model;
 
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 
 import java.io.InputStream;
 import java.sql.Timestamp;
@@ -15,11 +16,14 @@ public class User {
     private Timestamp last_access_date;
     private boolean enabled;
     private Image photo;
+    private String type;
+    private ImageView img;
 
     public User(String name, String password){
         this.name =  name;
         this.Password = password;
     }
+    public User(){}
 
     public String getName() {
         return name;
@@ -39,6 +43,11 @@ public class User {
 
     public boolean isAdmin() {
         return isAdmin;
+    }
+
+    public String getType() {
+
+        return isAdmin ? "Admin" : "User";
     }
 
     public void setAdmin(boolean admin) {
@@ -86,6 +95,13 @@ public class User {
             Image image = new Image(photo);
             this.photo = image;
         }
+    }
+
+    public ImageView getImg() {
+        img = new ImageView(this.photo);
+        img.setFitWidth(50);
+        img.setFitHeight(50);
+        return img;
     }
 
     @Override

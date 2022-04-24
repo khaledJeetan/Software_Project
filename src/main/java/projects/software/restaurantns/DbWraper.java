@@ -1,16 +1,20 @@
 package projects.software.restaurantns;
 
+import javafx.scene.control.Alert;
 import model.*;
 
 import java.io.InputStream;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Timestamp;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class DbWraper {
+
+    private static Connection con;
+
+    private static PreparedStatement stmt;
+
+    private static String sql;
 
     private static final ReviewSystem main = new ReviewSystem();
 
@@ -45,6 +49,34 @@ public class DbWraper {
 
         String sql  = "select count(*) from RESTAURANT";
         return count(sql);
+    }
+
+    public static List<User> getUsers(){
+        List<User> users = new ArrayList<>();
+        sql  = "Select * from user_tb";
+        try {
+            con = main.getConnection();
+            stmt = con.prepareStatement(sql);
+            ResultSet resultSet = stmt.executeQuery();
+            while (resultSet.next()){
+                User user = new User();
+                user.setName(resultSet.getString("username"));
+                user.setPassword(resultSet.getString("password"));
+                user.setPhoto(resultSet.getBinaryStream("photo"));
+                user.setAdmin(resultSet.getBoolean("type"));
+                user.setCreation_date(resultSet.getTimestamp("creation_date"));
+                user.setLast_access_date(resultSet.getTimestamp("last_access_date"));
+                user.setUpdated_at(resultSet.getTimestamp("updated_at"));
+                user.setEnabled(resultSet.getBoolean("enabled"));
+                users.add(user);
+            }
+            return users;
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return users;
+
     }
 
     // this methode gets restaurants that have specified Service
@@ -96,7 +128,26 @@ public class DbWraper {
 
     }
 
-    public static User wrapUser(ResultSet resultSet) {
+    public static boolean deleteUser(User user){
+        try {
+
+            sql = "DELETE FROM USER_TB WHERE username  = ?";
+            con = main.getConnection();
+            stmt = con.prepareStatement(sql);
+            stmt.setString(1, user.getName());
+            stmt.execute();
+            return true;
+
+        } catch (Exception ex) {
+            Alert error = new Alert(Alert.AlertType.ERROR);
+            error.setTitle("Deleting Record Failed");
+            error.setHeaderText("Error While Deleting From Database!!");
+            error.setContentText(ex.getMessage());
+            return false;
+        }
+    }
+
+    public static User getUser(ResultSet resultSet) {
 
         try {
 

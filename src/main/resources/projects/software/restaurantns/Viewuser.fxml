@@ -3,35 +3,25 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="482.0" prefWidth="673.0" style="-fx-background-color: #9c9999;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projects.software.restaurantns.Viewuser">
+<AnchorPane prefHeight="600.0" prefWidth="1296.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projects.software.restaurantns.UsersController">
    <children>
-      <ImageView fitHeight="513.0" fitWidth="672.0" layoutX="-1.0" layoutY="-187.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../images/v2.jpeg" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="170.0" fitWidth="677.0" layoutX="-5.0" layoutY="317.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../images/vu.jpg" />
-         </image>
-      </ImageView>
-      <TableView layoutX="6.0" layoutY="201.0" prefHeight="271.0" prefWidth="661.0">
+      <TableView fx:id="userTable" layoutX="47.0" layoutY="262.0" prefHeight="286.0" prefWidth="953.0">
          <columns>
-            <TableColumn prefWidth="101.59999084472656" text="User name" />
-            <TableColumn prefWidth="116.00003051757812" text="Password" />
-            <TableColumn prefWidth="54.4000244140625" text="Type" />
-            <TableColumn prefWidth="110.4000244140625" text="CREATION DATE" />
-            <TableColumn prefWidth="119.199951171875" text="LAST ACCESS DATE" />
-            <TableColumn prefWidth="91.99993896484375" text="UPDATED AT" />
-            <TableColumn prefWidth="64.0001220703125" text="ENABLED" />
+            <TableColumn fx:id="photo" prefWidth="127.0" style="-fx-alignment: center;" text="Photo" />
+            <TableColumn fx:id="username" prefWidth="119.0" style="-fx-alignment: center;" text="USERNAME" />
+            <TableColumn fx:id="password" prefWidth="103.0" style="-fx-alignment: center;" text="PASSWORD" />
+            <TableColumn fx:id="type" minWidth="0.0" prefWidth="63.0" style="-fx-alignment: center;" text="TYPE" />
+            <TableColumn fx:id="creation_date" minWidth="0.0" prefWidth="130.0" style="-fx-alignment: center;" text="CREATION_DATE" />
+            <TableColumn fx:id="last_access" prefWidth="130.0" style="-fx-alignment: center;" text="LAST_ACCESS_DATE" />
+            <TableColumn fx:id="updated_at" minWidth="0.0" prefWidth="90.0" style="-fx-alignment: center;" text="UPDATED_AT" />
+            <TableColumn fx:id="enabled" prefWidth="71.0" style="-fx-alignment: center;" text="ENABLED" />
+            <TableColumn fx:id="action" prefWidth="119.0" style="-fx-alignment: center;" text="Actions" />
          </columns>
       </TableView>
-      <Label layoutX="254.0" layoutY="150.0" prefHeight="42.0" prefWidth="158.0" text="View Users" textFill="#101010">
+      <Label layoutX="445.0" layoutY="209.0" prefHeight="42.0" prefWidth="158.0" text="View Users" textFill="#101010">
          <font>
             <Font name="Monospaced Bold Italic" size="24.0" />
          </font>
