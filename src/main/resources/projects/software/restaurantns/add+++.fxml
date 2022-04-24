@@ -10,7 +10,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projects.software.restaurantns.Add">
    <children>
       <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #808080;">
@@ -49,6 +48,7 @@
                </font>
             </Label>
             <TextField layoutX="55.0" layoutY="265.0" prefHeight="74.0" prefWidth="150.0" />
+            <ImageView fitHeight="85.0" fitWidth="164.0" layoutX="49.0" layoutY="261.0" pickOnBounds="true" preserveRatio="true" />
          </children>
       </AnchorPane>
    </children>

@@ -6,109 +6,54 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="afterLogin" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="740.0" prefWidth="1075.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projects.software.restaurantns.ProfileController">
-   <children>
-      <SplitPane dividerPositions="0.2087604846225536" layoutX="69.0" layoutY="267.0" prefHeight="740.0" prefWidth="1075.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-        <items>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
-               <children>
-                  <ScrollPane prefHeight="417.0" prefWidth="183.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                     <content>
-                        <VBox prefHeight="793.0" prefWidth="251.0" spacing="5.0">
-                           <children>
-                              <ImageView fx:id="personalPhoto" fitHeight="146.0" fitWidth="165.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
-                                 <VBox.margin>
-                                    <Insets left="25.0" />
-                                 </VBox.margin>
-                                 <image>
-                                    <Image url="@../../../images/profileImage.jpg" />
-                                 </image>
-                              </ImageView>
-                              <Label fx:id="name" prefHeight="40.0" prefWidth="146.0">
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets left="25.0" />
-                                 </VBox.margin>
-                              </Label>
-                              <MenuButton alignment="CENTER" mnemonicParsing="false" prefHeight="35.0" prefWidth="209.0" text="Settings">
-                                <items>
-                                  <MenuItem mnemonicParsing="false" text="Profile" />
-                                  <MenuItem mnemonicParsing="false" text="Action 2" />
-                                </items>
-                                 <padding>
-                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                                 </padding>
-                                 <VBox.margin>
-                                    <Insets top="50.0" />
-                                 </VBox.margin>
-                              </MenuButton>
-                              <MenuButton alignment="CENTER" layoutX="10.0" layoutY="206.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="209.0" text="Settings">
-                                 <items>
-                                    <MenuItem mnemonicParsing="false" text="Action 1" />
-                                    <MenuItem mnemonicParsing="false" text="Action 2" />
-                                 </items>
-                                 <padding>
-                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                                 </padding>
-                              </MenuButton>
-                              <MenuButton alignment="CENTER" layoutX="10.0" layoutY="246.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="209.0" text="Settings">
-                                 <items>
-                                    <MenuItem mnemonicParsing="false" text="Action 1" />
-                                    <MenuItem mnemonicParsing="false" text="Action 2" />
-                                 </items>
-                                 <padding>
-                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                                 </padding>
-                              </MenuButton>
-                              <MenuButton alignment="CENTER" layoutX="10.0" layoutY="286.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="209.0" text="Settings">
-                                 <items>
-                                    <MenuItem mnemonicParsing="false" text="Action 1" />
-                                    <MenuItem mnemonicParsing="false" text="Action 2" />
-                                 </items>
-                                 <padding>
-                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                                 </padding>
-                              </MenuButton>
-                              <MenuButton alignment="CENTER" layoutX="10.0" layoutY="326.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="209.0" text="Settings">
-                                 <items>
-                                    <MenuItem mnemonicParsing="false" text="Action 1" />
-                                    <MenuItem mnemonicParsing="false" text="Action 2" />
-                                 </items>
-                                 <padding>
-                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                                 </padding>
-                              </MenuButton>
-                              <Button mnemonicParsing="false" onAction="#logout" prefHeight="42.0" prefWidth="203.0" text="Log out" />
-                           </children>
-                        </VBox>
-                     </content>
-                  </ScrollPane>
-               </children>
-            </AnchorPane>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
-               <children>
-                  <Label layoutX="208.0" layoutY="32.0" prefHeight="40.0" prefWidth="131.0" text="Welcome">
-                     <font>
-                        <Font name="System Bold" size="28.0" />
-                     </font>
-                  </Label>
-                  <Button layoutX="84.0" layoutY="653.0" mnemonicParsing="false" onAction="#uploadPhoto" prefHeight="50.0" prefWidth="139.0" text="Upload Photo" />
-                  <ImageView fx:id="imageView" fitHeight="192.0" fitWidth="279.0" layoutX="14.0" layoutY="430.0" pickOnBounds="true" preserveRatio="true" />
-                  <PieChart fx:id="pieChart" layoutX="316.0" layoutY="98.0" prefHeight="315.0" prefWidth="417.0" title="Statistics" />
-                  <Button layoutX="248.0" layoutY="653.0" mnemonicParsing="false" onAction="#addPhoto" prefHeight="50.0" prefWidth="131.0" text="Save photo" />
-               </children>
-            </AnchorPane>
-        </items>
-      </SplitPane>
-   </children>
+<AnchorPane fx:id="afterLogin" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="683.0" prefWidth="1067.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projects.software.restaurantns.ProfileController">
+    <children>
+          <AnchorPane layoutX="-5.0" layoutY="250.0" minHeight="0.0" minWidth="0.0" prefHeight="434.0" prefWidth="342.0" style="-fx-background-color: #ffffff;">
+         <children>
+                  <PieChart fx:id="pieChart" layoutY="8.0" prefHeight="351.0" prefWidth="342.0" title="Statistics" />
+                      <Button layoutX="14.0" layoutY="376.0" mnemonicParsing="false" onAction="#logout" prefHeight="42.0" prefWidth="203.0" text="Log out">
+               <font>
+                  <Font name="Monospaced Bold Italic" size="24.0" />
+               </font>
+            </Button>
+         </children>
+          </AnchorPane>
+      <ImageView fitHeight="438.0" fitWidth="342.0" layoutX="-5.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/jj.gif" />
+         </image></ImageView>
+      <AnchorPane layoutX="337.0" prefHeight="121.0" prefWidth="730.0" style="-fx-background-color: #2052e9;">
+         <children>
+                      <MenuButton alignment="CENTER" layoutX="359.0" layoutY="41.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="209.0" text="Settings">
+                          <items>
+                              <MenuItem mnemonicParsing="false" text="View Users" />
+                              <MenuItem mnemonicParsing="false" text="View Resturants" />
+                  <MenuItem mnemonicParsing="false" text="Add Resutants" />
+                  <MenuItem mnemonicParsing="false" text="Rating&amp;comment of the User" />
+                          </items>
+                          <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                          </padding>
+               <font>
+                  <Font name="Monospaced Bold Italic" size="18.0" />
+               </font>
+                      </MenuButton>
+            <ImageView fitHeight="45.0" fitWidth="37.0" layoutX="315.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/r.png" />
+               </image></ImageView>
+            <Label layoutX="34.0" layoutY="23.0" prefHeight="44.0" prefWidth="142.0" text="Admin">
+               <font>
+                  <Font name="Monospaced Bold Italic" size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="337.0" layoutY="120.0" prefHeight="563.0" prefWidth="730.0" style="-fx-background-color: #ffffff;" />
+    </children>
 </AnchorPane>

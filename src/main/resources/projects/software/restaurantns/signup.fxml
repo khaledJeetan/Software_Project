@@ -11,39 +11,39 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #B6B6B6;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projects.software.restaurantns.LoginController">
+<AnchorPane prefHeight="505.0" prefWidth="587.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projects.software.restaurantns.LoginController">
    <children>
-      <Pane layoutY="108.0" prefHeight="399.0" prefWidth="600.0" style="-fx-background-color: #B6B6B6;">
+      <Pane layoutY="102.0" prefHeight="402.0" prefWidth="600.0" style="-fx-background-color: #ffffff;">
          <children>
-            <TextField layoutX="247.0" layoutY="51.0" prefHeight="33.0" prefWidth="306.0" style="-fx-background-color: #E0E0E0; -fx-background-insets: 1; -fx-background-radius: 20;" />
-            <Label layoutX="40.0" layoutY="54.0" text="User Name" textFill="WHITE">
+            <TextField layoutX="293.0" layoutY="49.0" prefHeight="33.0" prefWidth="219.0" style="-fx-background-color: #c7cccb; -fx-background-insets: 1; -fx-background-radius: 20;" />
+            <Label layoutX="65.0" layoutY="51.0" text="User Name :" textFill="#9aa19d">
                <font>
-                  <Font name="System Bold" size="18.0" />
+                  <Font name="Monospaced Bold" size="24.0" />
                </font>
             </Label>
-            <Label layoutX="40.0" layoutY="153.0" text="New Password" textFill="WHITE">
+            <Label layoutX="44.0" layoutY="123.0" text="New Password :" textAlignment="CENTER" textFill="#9aa19d">
                <font>
-                  <Font name="System Bold" size="18.0" />
+                  <Font name="Monospaced Bold" size="24.0" />
                </font>
             </Label>
             <Separator layoutX="44.0" layoutY="12.0" opacity="0.15" prefHeight="5.0" prefWidth="519.0" />
-            <Label layoutX="40.0" layoutY="239.0" prefHeight="27.0" prefWidth="183.0" text="Confirm Password" textFill="WHITE">
+            <Label layoutX="22.0" layoutY="194.0" prefHeight="35.0" prefWidth="269.0" text="Confirm Password :" textFill="#9aa19d">
                <font>
-                  <Font name="System Bold" size="18.0" />
+                  <Font name="Monospaced Bold" size="24.0" />
                </font>
             </Label>
-            <Button layoutX="400.0" layoutY="331.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="158.0" style="-fx-background-color: #505050; -fx-border-color: #505050;" text="Create Account" textFill="#ddd9d9">
+            <Button layoutX="176.0" layoutY="278.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="256.0" style="-fx-background-color: #c7cccb;" text="Create Account" textAlignment="CENTER" textFill="#9aa19d">
                <font>
-                  <Font size="18.0" />
+                  <Font name="Monospaced Bold" size="24.0" />
                </font>
             </Button>
-            <PasswordField layoutX="247.0" layoutY="150.0" prefHeight="33.0" prefWidth="306.0" style="-fx-background-color: #E0E0E0; -fx-background-insets: 1; -fx-background-radius: 20;" />
-            <PasswordField layoutX="247.0" layoutY="236.0" prefHeight="33.0" prefWidth="306.0" style="-fx-background-color: #E0E0E0; -fx-background-insets: 1; -fx-background-radius: 20;" />
+            <PasswordField layoutX="293.0" layoutY="120.0" prefHeight="33.0" prefWidth="219.0" style="-fx-background-color: #c7cccb; -fx-background-insets: 1; -fx-background-radius: 20;" />
+            <PasswordField layoutX="293.0" layoutY="195.0" prefHeight="33.0" prefWidth="219.0" style="-fx-background-color: #c7cccb; -fx-background-insets: 1; -fx-background-radius: 20;" />
          </children>
       </Pane>
-      <ImageView fitHeight="134.0" fitWidth="200.0" layoutX="23.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="137.0" fitWidth="620.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../images/sign-up.gif" />
+            <Image url="@../../../images/ll.gif" />
          </image>
       </ImageView>
    </children>

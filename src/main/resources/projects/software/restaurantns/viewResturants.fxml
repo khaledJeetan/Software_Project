@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="396.0" prefWidth="609.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projects.software.restaurantns.Viewresturants">
+   <children>
+      <ImageView fitHeight="415.0" fitWidth="622.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/v1.jpeg" />
+         </image>
+      </ImageView>
+      <TableView cache="true" layoutX="8.0" layoutY="158.0" prefHeight="242.0" prefWidth="605.0">
+        <columns>
+          <TableColumn prefWidth="80.79998779296875" text="ID" />
+          <TableColumn prefWidth="79.20001220703125" text="Name" />
+            <TableColumn prefWidth="86.4000244140625" text="Address" />
+            <TableColumn prefWidth="85.5999755859375" text="Phone" />
+            <TableColumn prefWidth="79.20001220703125" text="Has Delivery" />
+            <TableColumn prefWidth="98.4000244140625" text="Is Health Approved" />
+            <TableColumn prefWidth="92.0" text="Cover Photo" />
+        </columns>
+         <cursor>
+            <Cursor fx:constant="NONE" />
+         </cursor>
+      </TableView>
+      <Label layoutX="237.0" layoutY="47.0" prefHeight="38.0" prefWidth="229.0" text="View Resturants">
+         <font>
+            <Font name="Monospaced Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="75.0" fitWidth="65.0" layoutX="479.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/Breakfast.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
