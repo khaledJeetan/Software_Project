@@ -72,15 +72,15 @@ public class DbWraper {
                 RestaurantService restaurantService = new RestaurantService();
                 restaurant.setId(resultSet.getInt("id"));
                 restaurant.setName(resultSet.getString("name"));
-                restaurant.setHasDelivery(resultSet.getBoolean("has_delivery"));
+                restaurant.setHasDelivery(resultSet.getString("has_delivery"));
                 restaurant.setPhone(resultSet.getInt("phone"));
-                restaurant.setHealthApproved(resultSet.getBoolean("is_health_approved"));
+                restaurant.setHealthApproved(resultSet.getString("is_health_approved"));
                 restaurant.setCoverPhoto(resultSet.getBinaryStream("cover_photo"));
                 service.setName(resultSet.getString("service"));
                 address.setCity(resultSet.getString("city"));
                 address.setLocation(resultSet.getString("location"));
                 restaurant.setLocation(address);
-                restaurantService.setService(service);
+                //restaurantService.setService(service);
                 restaurantService.setRestaurant(restaurant);
                 restaurantService.setPrice(resultSet.getInt("price"));
                 restaurantServiceArrayList.add(restaurantService);
@@ -107,7 +107,7 @@ public class DbWraper {
             Timestamp updated_at = resultSet.getTimestamp("updated_at");
             Timestamp last_access_date = resultSet.getTimestamp("last_access_date");
             boolean isEnable = resultSet.getBoolean("enabled");
-             InputStream photo = resultSet.getBinaryStream("photo");
+            InputStream photo = resultSet.getBinaryStream("photo");
             User user = new User(username, pass);
             user.setAdmin(isAmdin);
             user.setEnabled(isEnable);

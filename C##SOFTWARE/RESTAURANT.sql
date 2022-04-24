@@ -10,7 +10,9 @@ create table RESTAURANT
     HAS_DELIVERY       CHAR,
     PHONE              NUMBER       not null,
     IS_HEALTH_APPROVED CHAR default 0,
-    COVER_PHOTO        BLOB
+    COVER_PHOTO        BLOB,
+    OPENING_HOURS      VARCHAR2(80)
 )
 /
+
 

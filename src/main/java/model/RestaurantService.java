@@ -3,7 +3,7 @@ package model;
 public class RestaurantService {
 
     private Restaurant restaurant;
-    private Service service;
+    private int service;
     private int price;
 
     public Restaurant getRestaurant() {
@@ -14,11 +14,11 @@ public class RestaurantService {
         this.restaurant = restaurant;
     }
 
-    public Service getService() {
+    public int getService() {
         return service;
     }
 
-    public void setService(Service service) {
+    public void setService(int service) {
         this.service = service;
     }
 

@@ -22,7 +22,7 @@ public class ReviewSystem extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         this.stage = stage;
-        FXMLLoader fxmlLoader = new FXMLLoader(ReviewSystem.class.getResource("login.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(ReviewSystem.class.getResource("add resturant.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Restaurant Rating and Review System");
         stage.getIcons().add(new Image("icon.png"));

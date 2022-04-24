@@ -75,7 +75,7 @@ public class ServiceController {
         restaurantName.setText(restaurantService.getRestaurant().getName());
         restaurantCity.setText(restaurantService.getRestaurant().getLocation().getCity());
         restaurantLocation.setText(restaurantService.getRestaurant().getLocation().getLocation());
-        if (!restaurantService.getRestaurant().HasDelivery()) {
+        if (restaurantService.getRestaurant().getHasDelivery()=="N") {
             restaurantDelivery.setText("Delivery Not Available");
             restaurantDelivery.setTextFill(Color.RED);
         }

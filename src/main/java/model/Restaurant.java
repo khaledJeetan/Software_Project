@@ -8,13 +8,14 @@ public class Restaurant {
 
     private int id;
     private String name;
-    private Address address;
-    private boolean hasDelivery;
+    private  Address address;
+    private String hasDelivery;
     private int phone;
-    private boolean isHealthApproved;
+    private String isHealthApproved;
     private ArrayList<Service> services;
     private ArrayList<Review> reviews;
     private Image coverPhoto;
+    private static String Openinghours;
 
     public int getId() {
         return id;
@@ -22,6 +23,14 @@ public class Restaurant {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getOpeningHours() {
+        return Openinghours;
+    }
+
+    public void setOpeningHours(String OpeningHours) {
+        this.Openinghours = Openinghours;
     }
 
     public String getName() {
@@ -40,11 +49,11 @@ public class Restaurant {
         this.address = address;
     }
 
-    public boolean HasDelivery() {
+    public String getHasDelivery() {
         return hasDelivery;
     }
 
-    public void setHasDelivery(boolean hasDelivery) {
+    public void setHasDelivery(String hasDelivery) {
         this.hasDelivery = hasDelivery;
     }
 
@@ -56,11 +65,11 @@ public class Restaurant {
         this.phone = phone;
     }
 
-    public boolean isHealthApproved() {
+    public String getHealthApproved() {
         return isHealthApproved;
     }
 
-    public void setHealthApproved(boolean healthApproved) {
+    public void setHealthApproved(String healthApproved) {
         isHealthApproved = healthApproved;
     }
 

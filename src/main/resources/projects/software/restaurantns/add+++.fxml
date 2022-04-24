@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projects.software.restaurantns.Add">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projects.software.restaurantns.addRestaurantController">
    <children>
       <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #808080;">
          <children>
@@ -29,7 +29,7 @@
                   <Font name="System Italic" size="20.0" />
                </font>
             </Label>
-            <CheckBox layoutX="14.0" layoutY="153.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="291.0" text="Is Health Ministry approved" textFill="#f2f1f1">
+            <CheckBox fx:id="isApproved" layoutX="14.0" layoutY="153.0" mnemonicParsing="false" onAction="#isHealthApproved" prefHeight="30.0" prefWidth="291.0" text="Is Health Ministry approved" textFill="#f2f1f1">
                <font>
                   <Font name="System Italic" size="20.0" />
                </font>
@@ -39,16 +39,20 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <TextField layoutX="255.0" layoutY="74.0" prefHeight="26.0" prefWidth="90.0" />
-            <Button layoutX="222.0" layoutY="289.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="122.0" style="-fx-background-color: #505050;" text="Add Resturent" textFill="#f7f5f5" />
-            <Button layoutX="14.0" layoutY="368.0" mnemonicParsing="false" style="-fx-background-color: #505050;" text="Back" textFill="#f4f2f2" />
-            <Label layoutX="20.0" layoutY="232.0" prefHeight="30.0" prefWidth="254.0" text="Add Resturent photo profil" textFill="#f7f6f6">
+            <TextField fx:id="OpeningHours" layoutX="255.0" layoutY="74.0" prefHeight="26.0" prefWidth="90.0" />
+            <Button layoutX="223.0" layoutY="342.0" mnemonicParsing="false" onAction="#AddRestaurant" prefHeight="26.0" prefWidth="122.0" style="-fx-background-color: #505050;" text="Add Restaurant" textFill="#f7f5f5" />
+            <Button layoutX="15.0" layoutY="342.0" mnemonicParsing="false" onAction="#ThirdSceneBack" style="-fx-background-color: #505050;" text="Back" textFill="#f4f2f2" />
+            <Label layoutX="20.0" layoutY="232.0" prefHeight="30.0" prefWidth="254.0" text="Add Resturent photo profile" textFill="#f7f6f6">
                <font>
                   <Font name="System Italic" size="20.0" />
                </font>
             </Label>
-            <TextField layoutX="55.0" layoutY="265.0" prefHeight="74.0" prefWidth="150.0" />
-            <ImageView fitHeight="85.0" fitWidth="164.0" layoutX="49.0" layoutY="261.0" pickOnBounds="true" preserveRatio="true" />
+            <Button layoutX="35.0" layoutY="290.0" mnemonicParsing="false" onAction="#addPhoto" style="-fx-background-color: #505050;" text="Add photo" textFill="WHITE" />
+            <Label fx:id="msg0" layoutX="59.0" layoutY="376.0" prefHeight="20.0" prefWidth="291.0" textFill="#f20404">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
    </children>
