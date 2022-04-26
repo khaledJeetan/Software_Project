@@ -11,25 +11,25 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="afterLogin" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="683.0" prefWidth="1067.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projects.software.restaurantns.ProfileController">
+<AnchorPane fx:id="afterLogin" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1131.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projects.software.restaurantns.ProfileController">
     <children>
-          <AnchorPane layoutX="-5.0" layoutY="250.0" minHeight="0.0" minWidth="0.0" prefHeight="434.0" prefWidth="342.0" style="-fx-background-color: #ffffff;">
+          <AnchorPane layoutX="-5.0" layoutY="176.0" minHeight="0.0" minWidth="0.0" prefHeight="525.0" prefWidth="342.0" style="-fx-background-color: #ffffff;">
          <children>
-                  <PieChart fx:id="pieChart" layoutY="8.0" prefHeight="351.0" prefWidth="342.0" title="Statistics" />
-                      <Button layoutX="14.0" layoutY="376.0" mnemonicParsing="false" onAction="#logout" prefHeight="42.0" prefWidth="203.0" text="Log out">
+                  <PieChart fx:id="pieChart" layoutY="61.0" prefHeight="351.0" prefWidth="342.0" title="Statistics" />
+                      <Button layoutX="14.0" layoutY="467.0" mnemonicParsing="false" onAction="#logout" prefHeight="42.0" prefWidth="203.0" text="Log out">
                <font>
                   <Font name="Monospaced Bold Italic" size="24.0" />
                </font>
             </Button>
          </children>
           </AnchorPane>
-      <ImageView fitHeight="438.0" fitWidth="342.0" layoutX="-5.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="289.0" fitWidth="335.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../images/jj.gif" />
+            <Image url="@../../../images/bbb.jpeg" />
          </image></ImageView>
-      <AnchorPane layoutX="337.0" prefHeight="121.0" prefWidth="730.0" style="-fx-background-color: #2052e9;">
+      <AnchorPane layoutX="334.0" layoutY="-15.0" prefHeight="114.0" prefWidth="797.0" style="-fx-background-color: #2e576e;">
          <children>
-                      <MenuButton alignment="CENTER" layoutX="359.0" layoutY="41.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="209.0" text="Settings">
+                      <MenuButton alignment="CENTER" layoutX="365.0" layoutY="42.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="209.0" text="Settings">
                           <items>
                               <MenuItem mnemonicParsing="false" text="View Users" />
                               <MenuItem mnemonicParsing="false" text="View Resturants" />
@@ -43,17 +43,17 @@
                   <Font name="Monospaced Bold Italic" size="18.0" />
                </font>
                       </MenuButton>
-            <ImageView fitHeight="45.0" fitWidth="37.0" layoutX="315.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="45.0" fitWidth="37.0" layoutX="316.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../images/r.png" />
                </image></ImageView>
-            <Label layoutX="34.0" layoutY="23.0" prefHeight="44.0" prefWidth="142.0" text="Admin">
+            <Label layoutX="14.0" layoutY="35.0" prefHeight="44.0" prefWidth="142.0" text="Admin" textFill="#0d0d0d">
                <font>
                   <Font name="Monospaced Bold Italic" size="36.0" />
                </font>
             </Label>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="337.0" layoutY="120.0" prefHeight="563.0" prefWidth="730.0" style="-fx-background-color: #ffffff;" />
+      <AnchorPane layoutX="334.0" layoutY="99.0" prefHeight="601.0" prefWidth="797.0" style="-fx-background-color: #ffffff;" />
     </children>
 </AnchorPane>

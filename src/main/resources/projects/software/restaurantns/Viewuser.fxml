@@ -3,12 +3,19 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="1296.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projects.software.restaurantns.UsersController">
+<AnchorPane prefHeight="580.0" prefWidth="963.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projects.software.restaurantns.UsersController">
    <children>
-      <TableView fx:id="userTable" layoutX="47.0" layoutY="262.0" prefHeight="286.0" prefWidth="953.0">
+      <ImageView fitHeight="755.0" fitWidth="1059.0" layoutX="-81.0" layoutY="-175.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/bbbbb.jpeg" />
+         </image>
+      </ImageView>
+      <TableView fx:id="userTable" layoutX="12.0" layoutY="271.0" prefHeight="286.0" prefWidth="953.0">
          <columns>
             <TableColumn fx:id="photo" prefWidth="127.0" style="-fx-alignment: center;" text="Photo" />
             <TableColumn fx:id="username" prefWidth="119.0" style="-fx-alignment: center;" text="USERNAME" />
@@ -21,9 +28,9 @@
             <TableColumn fx:id="action" prefWidth="119.0" style="-fx-alignment: center;" text="Actions" />
          </columns>
       </TableView>
-      <Label layoutX="445.0" layoutY="209.0" prefHeight="42.0" prefWidth="158.0" text="View Users" textFill="#101010">
+      <Label layoutX="366.0" layoutY="27.0" prefHeight="59.0" prefWidth="245.0" text="View Users" textFill="#101010">
          <font>
-            <Font name="Monospaced Bold Italic" size="24.0" />
+            <Font name="Monospaced Bold Italic" size="36.0" />
          </font>
       </Label>
    </children>
