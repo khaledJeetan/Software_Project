@@ -28,6 +28,8 @@ public class DbWraper {
             while(resultSet.next()){
                 rowCount = resultSet.getInt(1);
             }
+            con.close();
+            stmt.close();
             return rowCount;
         }catch (Exception e){
             e.printStackTrace();
@@ -51,6 +53,26 @@ public class DbWraper {
         return count(sql);
     }
 
+    public static List<Service> getServices(){
+        sql = "select * from service";
+        List<Service> serviceList = new ArrayList<>();
+        try{
+            con = main.getConnection();
+            stmt = con.prepareStatement(sql);
+            ResultSet resultSet = stmt.executeQuery();
+            while (resultSet.next()){
+                Service s = new Service();
+                s.setID(resultSet.getInt("ID"));
+                s.setName(resultSet.getString("name"));
+                serviceList.add(s);
+            }
+            return serviceList;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
     public static List<User> getUsers(){
         List<User> users = new ArrayList<>();
         sql  = "Select * from user_tb";
@@ -69,7 +91,10 @@ public class DbWraper {
                 user.setUpdated_at(resultSet.getTimestamp("updated_at"));
                 user.setEnabled(resultSet.getBoolean("enabled"));
                 users.add(user);
+
             }
+            con.close();
+            stmt.close();
             return users;
 
         }catch (Exception e){
@@ -80,33 +105,34 @@ public class DbWraper {
     }
 
     // this methode gets restaurants that have specified Service
-    public static List<RestaurantService> getrestaurants(String serv){
+    public static List<RestaurantService> getRestaurants(String serv){
 
         List<RestaurantService> restaurantServiceArrayList = new ArrayList<>();
-        String sql = "select r.id,r.name,Address.city,Address.location,r.has_Delivery,r.phone," +
-                "r.is_health_approved,r.cover_photo,service.name service," +
-                "restaurant_service.price from restaurant r\n" +
-                "inner join restaurant_service on r.id = restaurant_service.restaurant_id\n" +
-                "inner join address on address.id = r.address\n" +
-                "inner join service on service.id = restaurant_service.service_id\n" +
-                "where service.name like ?";
-        System.out.println("search Word is:- " + serv + " SQL satement is: \n"+sql );
+        String sql = """
+                select r.id,r.name,Address.city,Address.location,r.has_Delivery,r.phone,r.is_health_approved,
+                r.cover_photo,service.name service,restaurant_service.price from restaurant r
+                inner join restaurant_service on r.id = restaurant_service.restaurant_id
+                inner join address on address.id = r.address
+                inner join service on service.id = restaurant_service.service_id
+                where service.name like ?""";
+        System.out.println("search Word is:- " + serv + " SQL statement is: \n"+sql );
         try {
             Connection con = main.getConnection();
             PreparedStatement stmt = con.prepareStatement(sql);
             stmt.setString(1,"%" + serv + "%");
             ResultSet resultSet = stmt.executeQuery();
-
+            Address address;
+            Service service;
             while(resultSet.next()){
                 Restaurant restaurant = new Restaurant();
-                Address address = new Address();
-                Service service = new Service();
+                address = new Address();
+                service = new Service();
                 RestaurantService restaurantService = new RestaurantService();
                 restaurant.setId(resultSet.getInt("id"));
                 restaurant.setName(resultSet.getString("name"));
-                restaurant.setHasDelivery(resultSet.getString("has_delivery"));
+                restaurant.setHasDelivery(resultSet.getBoolean("has_delivery"));
                 restaurant.setPhone(resultSet.getInt("phone"));
-                restaurant.setHealthApproved(resultSet.getString("is_health_approved"));
+                restaurant.setHealthApproved(resultSet.getBoolean("is_health_approved"));
                 restaurant.setCoverPhoto(resultSet.getBinaryStream("cover_photo"));
                 service.setName(resultSet.getString("service"));
                 address.setCity(resultSet.getString("city"));
@@ -117,6 +143,8 @@ public class DbWraper {
                 restaurantService.setPrice(resultSet.getInt("price"));
                 restaurantServiceArrayList.add(restaurantService);
             }
+            con.close();
+            stmt.close();
             return restaurantServiceArrayList;
 
         }catch (Exception e){
@@ -131,11 +159,16 @@ public class DbWraper {
     public static boolean deleteUser(User user){
         try {
 
+            System.out.println("Program Is Here before Query Deleting");
             sql = "DELETE FROM USER_TB WHERE username  = ?";
             con = main.getConnection();
             stmt = con.prepareStatement(sql);
             stmt.setString(1, user.getName());
-            stmt.execute();
+            stmt.executeUpdate();
+            System.out.println("Program Is Here after Query Deleting");
+
+            con.close();
+            stmt.close();
             return true;
 
         } catch (Exception ex) {
@@ -147,25 +180,45 @@ public class DbWraper {
         }
     }
 
+    public static int checkAddress(Address address){
+        try {
+            sql = "Select id from Address where city = ? and location = ?";
+            con = main.getConnection();
+            stmt = con.prepareStatement(sql);
+            stmt.setString(1,address.getCity());
+            stmt.setString(2,address.getLocation());
+            ResultSet resultSet = stmt.executeQuery();
+            if(resultSet.next())
+                return resultSet.getInt("id");
+            return 0;
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return 0;
+        }
+    }
+
     public static User getUser(ResultSet resultSet) {
 
         try {
 
             String username = resultSet.getString("username");
             String pass = resultSet.getString("password");
-            boolean isAmdin = resultSet.getBoolean("type");
+            boolean isAdmin = resultSet.getBoolean("type");
             Timestamp creation_date = resultSet.getTimestamp("creation_date");
             Timestamp updated_at = resultSet.getTimestamp("updated_at");
             Timestamp last_access_date = resultSet.getTimestamp("last_access_date");
             boolean isEnable = resultSet.getBoolean("enabled");
             InputStream photo = resultSet.getBinaryStream("photo");
             User user = new User(username, pass);
-            user.setAdmin(isAmdin);
+            user.setAdmin(isAdmin);
             user.setEnabled(isEnable);
             user.setCreation_date(creation_date);
             user.setLast_access_date(last_access_date);
             user.setUpdated_at(updated_at);
             user.setPhoto(photo);
+            con.close();
+            stmt.close();
             return user;
 
         }catch (Exception e){

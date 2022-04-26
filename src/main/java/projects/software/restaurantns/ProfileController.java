@@ -5,6 +5,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.chart.PieChart;
 import javafx.scene.control.Label;
+import javafx.scene.control.Slider;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.image.WritableImage;
@@ -34,12 +35,23 @@ public class ProfileController {
     ImageView imageView;
     @FXML
     ImageView personalPhoto;
+    @FXML
+    private Slider price;
+    @FXML
+    private Label selectedPrice;
 
 
     private byte [] person_image;
 
+
     public void initialize(){
         loadData();
+        price.valueProperty().addListener((observable, oldValue, newValue) -> {
+
+            selectedPrice.setText(Double.toString(newValue.intValue()));
+
+
+        });
     }
 
     @FXML
@@ -98,7 +110,7 @@ public class ProfileController {
             System.out.println("image saved successfully");
             stmt.close();
             con.close();
-            imageView.relocate(0.0001,0.0001);
+           // imageView.relocate(0.0001,0.0001);
 
         } catch (SQLException ex) {
             System.out.println("error");

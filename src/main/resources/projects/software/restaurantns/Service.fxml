@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="32.0" prefWidth="330.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projects.software.restaurantns.ServiceItemController">
+   <children>
+      <GridPane hgap="40.0" vgap="10.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <CheckBox fx:id="service" mnemonicParsing="false" onAction="#addService" prefHeight="34.0" prefWidth="194.0" text="CheckBox" textFill="#f7f0f0" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS">
+               <padding>
+                  <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
+               </padding>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </CheckBox>
+            <TextField fx:id="value" alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" promptText="EX: 130" GridPane.columnIndex="1">
+               <padding>
+                  <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
+               </padding>
+               <opaqueInsets>
+                  <Insets left="12.0" />
+               </opaqueInsets>
+            </TextField>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

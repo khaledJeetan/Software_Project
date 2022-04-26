@@ -9,9 +9,9 @@ public class Restaurant {
     private int id;
     private String name;
     private  Address address;
-    private String hasDelivery;
+    private boolean hasDelivery;
     private int phone;
-    private String isHealthApproved;
+    private boolean isHealthApproved;
     private ArrayList<Service> services;
     private ArrayList<Review> reviews;
     private Image coverPhoto;
@@ -49,11 +49,11 @@ public class Restaurant {
         this.address = address;
     }
 
-    public String getHasDelivery() {
+    public boolean getHasDelivery() {
         return hasDelivery;
     }
 
-    public void setHasDelivery(String hasDelivery) {
+    public void setHasDelivery(boolean hasDelivery) {
         this.hasDelivery = hasDelivery;
     }
 
@@ -65,11 +65,11 @@ public class Restaurant {
         this.phone = phone;
     }
 
-    public String getHealthApproved() {
+    public boolean getHealthApproved() {
         return isHealthApproved;
     }
 
-    public void setHealthApproved(String healthApproved) {
+    public void setHealthApproved(boolean healthApproved) {
         isHealthApproved = healthApproved;
     }
 

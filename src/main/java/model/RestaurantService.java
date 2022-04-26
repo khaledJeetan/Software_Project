@@ -3,8 +3,8 @@ package model;
 public class RestaurantService {
 
     private Restaurant restaurant;
-    private int service;
-    private int price;
+    private Service service;
+    private float price;
 
     public Restaurant getRestaurant() {
         return restaurant;
@@ -14,19 +14,19 @@ public class RestaurantService {
         this.restaurant = restaurant;
     }
 
-    public int getService() {
+    public Service getService() {
         return service;
     }
 
-    public void setService(int service) {
+    public void setService(Service service) {
         this.service = service;
     }
 
-    public int getPrice() {
+    public float getPrice() {
         return price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(float price) {
         this.price = price;
     }
 }
