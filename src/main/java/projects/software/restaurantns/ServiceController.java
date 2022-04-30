@@ -49,7 +49,7 @@ public class ServiceController {
         //System.out.println(location.getPath());
         String s = location.getPath().substring(87).split("\\.")[0];
         //System.out.println("hello for testing "  );
-        restaurantServices.addAll(DbWraper.getrestaurants(s));
+        restaurantServices.addAll(DbWrapper.getRestaurants(s));
         if(restaurantServices != null) {
             showRestaurants(restaurantServices);
         }
@@ -73,9 +73,9 @@ public class ServiceController {
         restaurantImage.setImage(image);
         servicePrice.setText("Price: " + String.valueOf(restaurantService.getPrice()) + "$");
         restaurantName.setText(restaurantService.getRestaurant().getName());
-        restaurantCity.setText(restaurantService.getRestaurant().getLocation().getCity());
-        restaurantLocation.setText(restaurantService.getRestaurant().getLocation().getLocation());
-        if (restaurantService.getRestaurant().getHasDelivery()=="N") {
+        restaurantCity.setText(restaurantService.getRestaurant().getAddress().getCity());
+        restaurantLocation.setText(restaurantService.getRestaurant().getAddress().getLocation());
+        if (restaurantService.getRestaurant().getHasDelivery()) {
             restaurantDelivery.setText("Delivery Not Available");
             restaurantDelivery.setTextFill(Color.RED);
         }
@@ -91,6 +91,7 @@ public class ServiceController {
             @Override
             public void onClickListener(RestaurantService restaurantService) {
                 setData(restaurantService);
+
             }
         };
 

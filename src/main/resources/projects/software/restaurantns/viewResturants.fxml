@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -9,34 +8,30 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="498.0" prefWidth="904.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projects.software.restaurantns.Viewresturants">
+<AnchorPane prefHeight="370.0" prefWidth="908.0" style="-fx-background-radius: 25%; -fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projects.software.restaurantns.RestaurantTableController">
    <children>
-      <ImageView fitHeight="623.0" fitWidth="937.0" layoutY="-107.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../images/v1.jpeg" />
-         </image>
-      </ImageView>
-      <TableView cache="true" layoutX="6.0" layoutY="198.0" prefHeight="279.0" prefWidth="902.0">
+      <TableView fx:id="restaurantTable" cache="true" layoutX="3.0" layoutY="134.0" prefHeight="279.0" prefWidth="902.0">
         <columns>
-          <TableColumn prefWidth="80.79998779296875" text="ID" />
-          <TableColumn prefWidth="96.0" text="Name" />
-            <TableColumn prefWidth="102.0" text="Address" />
-            <TableColumn prefWidth="111.0" text="Phone" />
-            <TableColumn prefWidth="108.0" text="Has Delivery" />
-            <TableColumn prefWidth="134.0" text="Is Health Approved" />
-            <TableColumn prefWidth="142.0" text="Cover Photo" />
-            <TableColumn prefWidth="127.0" text="Action" />
+          <TableColumn fx:id="ID" prefWidth="29.0" resizable="false" style="-fx-alignment: center;" text="ID" />
+            <TableColumn fx:id="photo" prefWidth="79.0" resizable="false" style="-fx-alignment: center;" text="Cover Photo" />
+          <TableColumn fx:id="name" prefWidth="146.0" resizable="false" style="-fx-alignment: center;" text="Name" />
+            <TableColumn fx:id="address" maxWidth="1.7976931348623157E308" prefWidth="198.0" resizable="false" text="Address">
+               <columns>
+                  <TableColumn fx:id="city" minWidth="0.0" prefWidth="77.0" style="-fx-alignment: center;" text="City" />
+                  <TableColumn fx:id="Located" maxWidth="1.7976931348623157E308" prefWidth="121.0" resizable="false" style="-fx-alignment: center;" text="Location" />
+               </columns></TableColumn>
+            <TableColumn fx:id="phone" minWidth="1.0" prefWidth="117.0" resizable="false" style="-fx-alignment: center;" text="Phone" />
+            <TableColumn fx:id="hasDelivery" minWidth="0.0" prefWidth="82.0" resizable="false" style="-fx-alignment: center;" text="Has Delivery" />
+            <TableColumn fx:id="healthApproved" prefWidth="104.0" resizable="false" style="-fx-alignment: center;" text="Health Approved" />
+            <TableColumn fx:id="action" minWidth="0.0" prefWidth="146.0" resizable="false" style="-fx-alignment: center;" text="Action" />
         </columns>
-         <cursor>
-            <Cursor fx:constant="NONE" />
-         </cursor>
       </TableView>
-      <Label layoutX="457.0" layoutY="46.0" prefHeight="38.0" prefWidth="229.0" text="View Resturants">
+      <Label layoutX="337.0" layoutY="71.0" prefHeight="38.0" prefWidth="229.0" text="View Resturants">
          <font>
             <Font name="Monospaced Bold Italic" size="24.0" />
          </font>
       </Label>
-      <ImageView fitHeight="75.0" fitWidth="65.0" layoutX="700.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="75.0" fitWidth="65.0" layoutX="655.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../images/Breakfast.png" />
          </image>

@@ -42,8 +42,8 @@ public class RestaurantIemController {
         this.restaurantService = restaurantService;
         Restaurant restaurant = restaurantService.getRestaurant();
         restaurantName.setText(restaurant.getName());
-        city.setText(restaurant.getLocation().getCity());
-        Rlocation.setText(restaurant.getLocation().getLocation());
+        city.setText(restaurant.getAddress().getCity());
+        Rlocation.setText(restaurant.getAddress().getLocation());
 
         Image image = restaurant.getCoverPhoto();
         if(image != null){
@@ -51,7 +51,7 @@ public class RestaurantIemController {
         }
 
         String sql = "select count(*) from review where restaurant_id = " + restaurant.getId();
-        int reviewCount = DbWraper.count(sql);
+        int reviewCount = DbWrapper.count(sql);
         reviewNumber.setText(String.valueOf(reviewCount));
 
     }

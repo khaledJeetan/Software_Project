@@ -22,6 +22,9 @@ public class SingupController {
     @FXML
     private Label msg;
 
+    private Connection con;
+    private PreparedStatement stmt;
+
     @FXML
     public void signup() {
         if(!validCreateAccount()){
@@ -33,37 +36,35 @@ public class SingupController {
 
     private boolean validCreateAccount() {
         if(username.getText().isEmpty() || newpassword.getText().isEmpty()|| confirmpassword.getText().isEmpty()){
-            msg.setText("Please Enter Information");
+          //  msg.setText("Please Enter Information");
         }
         else if(!((confirmpassword.getText()).equals(newpassword.getText()))){
-            msg.setText("the Password is not equal");
+          //  msg.setText("the Password is not equal");
         }
 
         else if(!isUser()){
             if(createUser()) {
-                msg.setText("Account created Successfully");
-                msg.setStyle("-fx-background-color:#d1e6dd");
-                msg.setTextFill(Color.rgb(48, 92, 69));
-                msg.setVisible(true);
+             //   msg.setText("Account created Successfully");
+              //  msg.setStyle("-fx-background-color:#d1e6dd");
+             ////   msg.setTextFill(Color.rgb(48, 92, 69));
+              //  msg.setVisible(true);
                 return true;
             }
         }
         else {
-            msg.setText(username.getText() + " is Already a User!!");
+         //   msg.setText(username.getText() + " is Already a User!!");
         }
-        msg.setVisible(true);
+       // msg.setVisible(true);
         return false;
     }
 
     private boolean isUser(){
         try {
-            Connection con = main.getConnection();
-            Statement stmt = con.createStatement();
-            String sql = "select USERNAME from user_tb where USERNAME = '" +
-                    this.username.getText() + "'";
-
-             ResultSet resultSet = stmt.executeQuery(sql);
-
+            String sql = "select USERNAME from user_tb where USERNAME = ?";
+            con = main.getConnection();
+            stmt = con.prepareStatement(sql);
+            stmt.setString(1, this.username.getText());
+             ResultSet resultSet = stmt.executeQuery();
              if(resultSet.next()) {
                  stmt.close();
                  con.close();
@@ -83,14 +84,11 @@ public class SingupController {
 
     private boolean createUser(){
         try {
-            Timestamp creationDate = Timestamp.valueOf(LocalDateTime.now());
-
-            Connection con = main.getConnection();
-            String sql = "Insert into USER_TB (USERNAME,PASSWORD,CREATION_DATE) values (?,?,?)";
-            PreparedStatement stmt = con.prepareStatement(sql);
+            con = main.getConnection();
+            String sql = "Insert into USER_TB (USERNAME,PASSWORD) values (?,?)";
+            stmt = con.prepareStatement(sql);
             stmt.setString(1,username.getText());
             stmt.setString(2,confirmpassword.getText());
-            stmt.setTimestamp(3,creationDate);
             stmt.executeUpdate();
             System.out.println("Query Executed successfully");
             stmt.close();

@@ -3,6 +3,7 @@ package model;
 import java.io.InputStream;
 import java.util.ArrayList;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 
 public class Restaurant {
 
@@ -15,7 +16,10 @@ public class Restaurant {
     private ArrayList<Service> services;
     private ArrayList<Review> reviews;
     private Image coverPhoto;
-    private static String Openinghours;
+    private  String Openinghours;
+    private  String city;
+    private  String location;
+    private ImageView img;
 
     public int getId() {
         return id;
@@ -41,12 +45,30 @@ public class Restaurant {
         this.name = name;
     }
 
-    public Address getLocation() {
+    public Address getAddress() {
         return address;
     }
 
     public void setLocation(Address address) {
+        this.city = address.getCity();
+        this.location = address.getLocation();
         this.address = address;
+    }
+
+    public String getCity() {
+        return this.city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
     }
 
     public boolean getHasDelivery() {
@@ -65,7 +87,7 @@ public class Restaurant {
         this.phone = phone;
     }
 
-    public boolean getHealthApproved() {
+    public boolean getIsHealthApproved() {
         return isHealthApproved;
     }
 
@@ -98,6 +120,12 @@ public class Restaurant {
             Image image = new Image(coverPhoto);
             this.coverPhoto = image;
         }
+    }
+    public ImageView getImg() {
+        img = new ImageView(this.coverPhoto);
+        img.setFitWidth(50);
+        img.setFitHeight(50);
+        return img;
     }
 
     @Override
