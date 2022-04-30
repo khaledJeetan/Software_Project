@@ -4,6 +4,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
@@ -25,9 +26,9 @@ import java.util.logging.Logger;
 public class addRestaurantController implements Initializable {
     private Connection con;
     private final  ReviewSystem main = new ReviewSystem();
-    static Restaurant  $restaurant= new Restaurant();
-    static Address $address = new Address();
-    private static ArrayList<RestaurantService> resService=new ArrayList<RestaurantService>();
+    private static Restaurant  $restaurant= new Restaurant();
+    private static Address $address = new Address();
+    private static ArrayList<RestaurantService> resService=new ArrayList<>();
     private MyListener myListener;
     ObservableList <String> list = FXCollections.observableArrayList(
             "Nablus","Jenin","Tulkarem","Al-Quds","Ramallah","Tubas","Biet Lahm","Hebron");
@@ -57,11 +58,17 @@ public class addRestaurantController implements Initializable {
     @FXML
     private ToggleGroup Delivery;
     @FXML
+    private Label photoFile;
+    @FXML
     private Label msg;
     @FXML
     private Label msg0;
     @FXML
     private Label msg1;
+    @FXML
+    private AnchorPane pane;
+
+    private static AnchorPane mainPane;
 
     @FXML
     public void citySelected () {
@@ -78,7 +85,7 @@ public class addRestaurantController implements Initializable {
     }
     @FXML
     public void firstSceneNext () {
-
+        mainPane = pane;
         if (!isNumber(phoneNumber.getText()))
             msg.setText("Please Enter a number in the phone number field");
         else if (restaurantName.getText().isEmpty() || address.getText().isEmpty() ||
@@ -94,95 +101,48 @@ public class addRestaurantController implements Initializable {
                 $restaurant.setHasDelivery(false);
             $restaurant.setPhone(Integer.parseInt(phoneNumber.getText()));
 
-            main.changeScene("add++.fxml");
+            nextScene("add++.fxml");
         }
 
 
     }
 
-    //public void ServiceOptions(){
-//        if (Breakfast.isSelected())
-//        {
-//            num='1';
-//
-//            RestaurantService $breakfast = new RestaurantService();
-//            $breakfast.setPrice(Integer.parseInt(BreakfastPrice.getText()));
-//            $breakfast.setService(10);
-//            resService.add($breakfast);
-//        }
-//        if (Lunch.isSelected())
-//        {
-//            num='1';
-//            RestaurantService $lunch = new RestaurantService();
-//            $lunch.setPrice(Integer.parseInt(LunchPrice.getText()));
-//            $lunch.setService(11);
-//            resService.add($lunch);
-//
-//        }
-//        if (Dinner.isSelected())
-//        {
-//            num='1';
-//            RestaurantService $dinner = new RestaurantService();
-//            $dinner.setPrice(Integer.parseInt(DinnerPrice.getText()));
-//            $dinner.setService(12);
-//            resService.add($dinner);
-//
-//        }
-//        if (CoffeeTea.isSelected())
-//        {
-//            num='1';
-//            RestaurantService $coffeetea = new RestaurantService();
-//            $coffeetea.setPrice(Integer.parseInt(CoffeeTeaPrice.getText()));
-//            $coffeetea.setService(13);
-//            resService.add($coffeetea);
-//
-//
-//        }
-//        if (Sweets.isSelected())
-//        {
-//            num='1';
-//            RestaurantService $sweets = new RestaurantService();
-//            $sweets.setPrice(Integer.parseInt(SweetsPrice.getText()));
-//            $sweets.setService(14);
-//            resService.add($sweets);
-//
-//        }
-//        if (HealthyFood.isSelected())
-//        {
-//            num='1';
-//            RestaurantService $healthy = new RestaurantService();
-//            $healthy.setPrice(Integer.parseInt(HealthyFoodPrice.getText()));
-//            $healthy.setService(15);
-//            resService.add($healthy);
-//
-//        }
-   // }
-
-
     // needs to be checked
     @FXML
     public void SecondSceneNext () {
-//
-//        if(num==0)
-//            msg1.setText("Please select at least one service and write its price!");
-//        else if (Breakfast.isSelected()&&!isNumber(BreakfastPrice.getText())||Lunch.isSelected()&&!isNumber(LunchPrice.getText())||Dinner.isSelected()&&!isNumber(DinnerPrice.getText())||CoffeeTea.isSelected()&&!isNumber(CoffeeTeaPrice.getText())||Sweets.isSelected()&&!isNumber(SweetsPrice.getText())||HealthyFood.isSelected()&&!isNumber(HealthyFoodPrice.getText()))
-//            msg1.setText("Please write the price of the service you selected");
-//        else {
+
         if (!resService.isEmpty())
-            //ServiceOptions();
-            main.changeScene("add+++.fxml");
+            nextScene("add+++.fxml");
+
         msg1.setText("Please select at least one service and write its price!");
+    }
+
+    private void nextScene(String next) {
+        try {
+            mainPane.getChildren().clear();
+           FXMLLoader loader = new FXMLLoader(getClass().getResource(next));
+            AnchorPane nextPane = loader.load();
+            mainPane.getChildren().add(nextPane);
+
+            mainPane.setRightAnchor(nextPane, .0);
+            mainPane.setTopAnchor(nextPane, .0);
+            mainPane.setLeftAnchor(nextPane, .0);
+            mainPane.setBottomAnchor(nextPane, .0);
+
+            } catch (IOException ex) {
+            ex.printStackTrace();
+        }
     }
 
 
     @FXML
     public void SecondSceneBack () {
-        main.changeScene("add resturant.fxml");
+        nextScene("add resturant.fxml");
     }
 
     @FXML
     public void ThirdSceneBack () {
-        main.changeScene("add++.fxml");
+        nextScene("add++.fxml");
     }
 
     @FXML
@@ -205,7 +165,7 @@ public class addRestaurantController implements Initializable {
 
         if(file != null)
             try {
-
+                photoFile.setText(file.getName());
                 InputStream fin = new FileInputStream(file);
                 ByteArrayOutputStream bos = new ByteArrayOutputStream();
                 byte[] buf = new byte[1024];
@@ -218,6 +178,8 @@ public class addRestaurantController implements Initializable {
             } catch (IOException ex) {
                 Logger.getLogger("ss");
             }
+        else
+            photoFile.setText("");
     }
     @FXML
     public boolean isHealthApproved () {
@@ -238,7 +200,7 @@ public class addRestaurantController implements Initializable {
                 PreparedStatement stmt = con.prepareStatement(sql,Statement.RETURN_GENERATED_KEYS);
                 stmt.setString(1, $address.getCity());
                 stmt.setString(2, $address.getLocation());
-                int addressID = DbWraper.checkAddress($address);
+                int addressID = DbWrapper.checkAddress($address);
                 if(addressID<1) {
                     stmt.executeUpdate();
                     ResultSet rs = stmt.executeQuery("select ADDRESS_PK_SEQUENCE.currval from DUAL");
@@ -254,7 +216,7 @@ public class addRestaurantController implements Initializable {
                 stmt.setBoolean(2,$restaurant.getHasDelivery());
                 stmt.setInt(3,$restaurant.getPhone());
                 stmt.setInt(4,addressID);
-                stmt.setBoolean(5,$restaurant.getHealthApproved());
+                stmt.setBoolean(5,$restaurant.getIsHealthApproved());
                 stmt.setString(6,OpeningHours.getText());
                 stmt.setBytes(7,res_photo);
                 stmt.executeUpdate();
@@ -268,6 +230,10 @@ public class addRestaurantController implements Initializable {
                     stmt3.setInt(1,r.getService().getID());
                     stmt3.setFloat(2,r.getPrice());
                     stmt3.setInt(3,$restaurant.getId());
+                    //System.out.println("RES ID : "+$restaurant.getId());
+                   // System.out.println("service ID : "+r.getService().getID());
+                    //System.out.println("RES ID : "+$restaurant.getId());
+
                     stmt3.executeUpdate();
                     stmt3.close();
                 }
@@ -279,7 +245,11 @@ public class addRestaurantController implements Initializable {
                 success.setContentText($restaurant.getName() + " has been added.");
                 success.show();
                 //
-                main.changeScene("viewRestaurants.fxml");
+                // RESET Static Variables
+                $restaurant = new Restaurant();
+                $address = new Address();
+                resService = new ArrayList<>();
+                nextScene("add resturant.fxml");
             }
             catch (Exception e){
                 try {
@@ -304,7 +274,7 @@ public class addRestaurantController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         city.setItems(list);
        if(grid != null)
-           showAvailableServices(DbWraper.getServices());
+           showAvailableServices(DbWrapper.getServices());
     }
 
     private void showAvailableServices(List<Service> serviceList) {

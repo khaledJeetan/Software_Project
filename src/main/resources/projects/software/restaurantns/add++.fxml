@@ -12,19 +12,19 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #808080;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projects.software.restaurantns.addRestaurantController">
+<AnchorPane prefHeight="486.0" prefWidth="681.0" style="-fx-background-color: #808080; -fx-background-radius: 25%;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projects.software.restaurantns.addRestaurantController">
    <children>
-      <Text fill="#f4f2f2" layoutX="24.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Resturant :" wrappingWidth="247.73673248291016">
+      <Text fill="#f4f2f2" layoutX="64.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Resturant :" wrappingWidth="247.73673248291016">
          <font>
             <Font name="System Bold Italic" size="29.0" />
          </font>
       </Text>
-      <ImageView fitHeight="394.0" fitWidth="238.0" layoutX="362.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="362.0" fitWidth="217.0" layoutX="407.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../images/h.jpeg" />
          </image>
       </ImageView>
-      <Label layoutX="29.0" layoutY="70.0" text="Service :" textFill="#fcf9f9">
+      <Label layoutX="69.0" layoutY="102.0" text="Service :" textFill="#fcf9f9">
          <font>
             <Font size="20.0" />
          </font>
@@ -34,19 +34,19 @@
             <Font name="System Italic" size="20.0" />
          </font>
       </Label>
-      <Label layoutX="246.0" layoutY="70.0" text="-Price" textFill="#f7f0f0">
+      <Label layoutX="286.0" layoutY="102.0" text="-Price" textFill="#f7f0f0">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Button layoutX="527.0" layoutY="367.0" mnemonicParsing="false" onAction="#SecondSceneNext" prefHeight="26.0" prefWidth="58.0" style="-fx-background-color: #505050;" text="Next" textFill="#f7f5f5" />
-      <Button layoutX="14.0" layoutY="368.0" mnemonicParsing="false" onAction="#SecondSceneBack" style="-fx-background-color: #505050;" text="Back" textFill="#f4f2f2" />
-      <Label fx:id="msg1" layoutX="106.0" layoutY="371.0" prefHeight="20.0" prefWidth="388.0" textFill="RED">
+      <Button layoutX="515.0" layoutY="420.0" mnemonicParsing="false" onAction="#SecondSceneNext" prefHeight="26.0" prefWidth="58.0" style="-fx-background-color: #505050;" text="Next" textFill="#f7f5f5" />
+      <Button layoutX="105.0" layoutY="421.0" mnemonicParsing="false" onAction="#SecondSceneBack" style="-fx-background-color: #505050;" text="Back" textFill="#f4f2f2" />
+      <Label fx:id="msg1" layoutX="206.0" layoutY="423.0" prefHeight="20.0" prefWidth="284.0" textFill="RED">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <ScrollPane fitToWidth="true" layoutX="14.0" layoutY="108.0" maxHeight="249.0" style="-fx-background-color: #808080;">
+      <ScrollPane fitToWidth="true" layoutX="54.0" layoutY="140.0" maxHeight="249.0" style="-fx-background-color: #808080;">
          <content>
             <GridPane fx:id="grid" style="-fx-background-color: #808080;">
               <rowConstraints>

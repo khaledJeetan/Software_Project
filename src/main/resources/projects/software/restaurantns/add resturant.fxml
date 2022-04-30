@@ -12,45 +12,11 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #808080;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projects.software.restaurantns.addRestaurantController">
+<AnchorPane fx:id="pane" prefHeight="482.0" prefWidth="653.0" style="-fx-background-color: #808080; -fx-background-radius: 25%;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projects.software.restaurantns.addRestaurantController">
    <children>
-      <Text fill="#f4f2f2" layoutX="14.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Resturant :" wrappingWidth="247.73673248291016">
-         <font>
-            <Font name="System Bold Italic" size="29.0" />
-         </font>
-      </Text>
-      <Label layoutX="9.0" layoutY="91.0" text="Name of Resturant" textFill="#fcf9f9">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Label>
-      <TextField fx:id="restaurantName" layoutX="206.0" layoutY="93.0" promptText="Resturant Name" />
-      <Label layoutX="9.0" layoutY="200.0" text="Location" textFill="#f4f2f2">
-         <font>
-            <Font name="System Italic" size="20.0" />
-         </font>
-      </Label>
-      <Label layoutX="19.0" layoutY="143.0" text="City" textFill="#f7f3f3">
-         <font>
-            <Font name="System Italic" size="20.0" />
-         </font></Label>
-      <ComboBox fx:id="city" layoutX="206.0" layoutY="145.0" onAction="#citySelected" prefWidth="150.0" promptText="select city" />
-      <Label layoutX="9.0" layoutY="266.0" text="Has Delivery" textFill="#eceaea">
-         <font>
-            <Font name="System Italic" size="20.0" />
-         </font>
-      </Label>
-      <AnchorPane layoutX="357.0" layoutY="1.0" prefHeight="394.0" prefWidth="238.0">
-         <children>
-            <ImageView fitHeight="394.0" fitWidth="238.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../images/h.jpeg" />
-               </image>
-            </ImageView>
-            <Button layoutX="165.0" layoutY="361.0" mnemonicParsing="false" onAction="#firstSceneNext" prefHeight="26.0" prefWidth="58.0" style="-fx-background-color: #505050;" text="Next" textFill="#f7f5f5" />
-         </children>
-      </AnchorPane>
-      <RadioButton fx:id="hasDelivery" layoutX="206.0" layoutY="266.0" mnemonicParsing="false" text="Yes" textFill="#faf4f4">
+      <TextField fx:id="restaurantName" layoutX="207.0" layoutY="134.0" promptText="Resturant Name" />
+      <ComboBox fx:id="city" layoutX="207.0" layoutY="186.0" onAction="#citySelected" prefWidth="150.0" promptText="select city" />
+      <RadioButton fx:id="hasDelivery" layoutX="207.0" layoutY="307.0" mnemonicParsing="false" text="Yes" textFill="#faf4f4">
          <font>
             <Font size="18.0" />
          </font>
@@ -58,19 +24,53 @@
             <ToggleGroup fx:id="Delivery" />
          </toggleGroup>
       </RadioButton>
-      <RadioButton fx:id="noDelivery" layoutX="281.0" layoutY="267.0" mnemonicParsing="false" text="No" textFill="#f7f4f4" toggleGroup="$Delivery">
+      <RadioButton fx:id="noDelivery" layoutX="282.0" layoutY="308.0" mnemonicParsing="false" text="No" textFill="#f7f4f4" toggleGroup="$Delivery">
          <font>
             <Font size="18.0" />
          </font>
       </RadioButton>
-      <Label layoutX="9.0" layoutY="326.0" text="Phone number" textFill="#f4f2f2">
+      <TextField fx:id="phoneNumber" layoutX="201.0" layoutY="370.0" promptText="Phone number" />
+      <TextField fx:id="address" layoutX="207.0" layoutY="243.0" promptText="Enter location" />
+      <Label layoutX="35.0" layoutY="134.0" text="Name of Resturant" textFill="#fcf9f9">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="35.0" layoutY="243.0" text="Location" textFill="#f4f2f2">
          <font>
             <Font name="System Italic" size="20.0" />
          </font>
       </Label>
-      <TextField fx:id="phoneNumber" layoutX="200.0" layoutY="329.0" promptText="Phone number" />
-      <TextField fx:id="address" layoutX="206.0" layoutY="202.0" promptText="Enter location" />
-      <Label fx:id="msg" layoutX="23.0" layoutY="363.0" prefHeight="20.0" prefWidth="310.0" textFill="#d71d1d">
+      <Label layoutX="45.0" layoutY="186.0" text="City" textFill="#f7f3f3">
+         <font>
+            <Font name="System Italic" size="20.0" />
+         </font></Label>
+      <Label layoutX="35.0" layoutY="309.0" text="Has Delivery" textFill="#eceaea">
+         <font>
+            <Font name="System Italic" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="35.0" layoutY="369.0" text="Phone number" textFill="#f4f2f2">
+         <font>
+            <Font name="System Italic" size="20.0" />
+         </font>
+      </Label>
+      <Text fill="#f4f2f2" layoutX="52.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Resturant :" wrappingWidth="247.73673248291016">
+         <font>
+            <Font name="System Bold Italic" size="29.0" />
+         </font>
+      </Text>
+      <AnchorPane layoutX="357.0" layoutY="4.0" prefHeight="392.0" prefWidth="233.0" style="-fx-background-radius: 25%;">
+         <children>
+            <ImageView fitHeight="380.0" fitWidth="228.0" layoutX="31.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/h.jpeg" />
+               </image>
+            </ImageView>
+            <Button layoutX="116.0" layoutY="422.0" mnemonicParsing="false" onAction="#firstSceneNext" prefHeight="26.0" prefWidth="58.0" style="-fx-background-color: #505050;" text="Next" textFill="#f7f5f5" />
+         </children>
+      </AnchorPane>
+      <Label fx:id="msg" layoutX="63.0" layoutY="427.0" prefHeight="26.0" prefWidth="398.0" textFill="#d71d1d">
          <font>
             <Font size="14.0" />
          </font></Label>

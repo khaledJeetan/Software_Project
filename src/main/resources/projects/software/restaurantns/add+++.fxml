@@ -10,50 +10,51 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projects.software.restaurantns.addRestaurantController">
+<AnchorPane prefHeight="577.0" prefWidth="660.0" style="-fx-background-color: #808080; -fx-background-radius: 25%;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projects.software.restaurantns.addRestaurantController">
    <children>
-      <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #808080;">
-         <children>
-            <Text fill="#f4f2f2" layoutX="24.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Resturant :" wrappingWidth="247.73673248291016">
-               <font>
-                  <Font name="System Bold Italic" size="29.0" />
-               </font>
-            </Text>
-            <ImageView fitHeight="394.0" fitWidth="238.0" layoutX="362.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../images/h.jpeg" />
-               </image>
-            </ImageView>
-            <Label layoutX="29.0" layoutY="153.0" textFill="#f7f3f3">
-               <font>
-                  <Font name="System Italic" size="20.0" />
-               </font>
-            </Label>
-            <CheckBox fx:id="isApproved" layoutX="14.0" layoutY="153.0" mnemonicParsing="false" onAction="#isHealthApproved" prefHeight="30.0" prefWidth="291.0" text="Is Health Ministry approved" textFill="#f2f1f1">
-               <font>
-                  <Font name="System Italic" size="20.0" />
-               </font>
-            </CheckBox>
-            <Label layoutX="10.0" layoutY="72.0" text="Resturant opening hours" textFill="#f7f0f0">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
-            <TextField fx:id="OpeningHours" layoutX="255.0" layoutY="74.0" prefHeight="26.0" prefWidth="90.0" />
-            <Button layoutX="223.0" layoutY="342.0" mnemonicParsing="false" onAction="#AddRestaurant" prefHeight="26.0" prefWidth="122.0" style="-fx-background-color: #505050;" text="Add Restaurant" textFill="#f7f5f5" />
-            <Button layoutX="15.0" layoutY="342.0" mnemonicParsing="false" onAction="#ThirdSceneBack" style="-fx-background-color: #505050;" text="Back" textFill="#f4f2f2" />
-            <Label layoutX="20.0" layoutY="232.0" prefHeight="30.0" prefWidth="254.0" text="Add Resturent photo profile" textFill="#f7f6f6">
-               <font>
-                  <Font name="System Italic" size="20.0" />
-               </font>
-            </Label>
-            <Button layoutX="35.0" layoutY="290.0" mnemonicParsing="false" onAction="#addPhoto" style="-fx-background-color: #505050;" text="Add photo" textFill="WHITE" />
-            <Label fx:id="msg0" layoutX="59.0" layoutY="376.0" prefHeight="20.0" prefWidth="291.0" textFill="#f20404">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Label>
-         </children>
-      </AnchorPane>
+      <Text fill="#f4f2f2" layoutX="59.0" layoutY="133.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Resturant :" wrappingWidth="247.73673248291016">
+         <font>
+            <Font name="System Bold Italic" size="29.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="416.0" fitWidth="248.0" layoutX="388.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/h.jpeg" />
+         </image>
+      </ImageView>
+      <Label layoutX="29.0" layoutY="153.0" textFill="#f7f3f3">
+         <font>
+            <Font name="System Italic" size="20.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="isApproved" layoutX="49.0" layoutY="231.0" mnemonicParsing="false" onAction="#isHealthApproved" prefHeight="30.0" prefWidth="291.0" text="Is Health Ministry approved" textFill="#f2f1f1">
+         <font>
+            <Font name="System Italic" size="20.0" />
+         </font>
+      </CheckBox>
+      <Label layoutX="45.0" layoutY="150.0" text="Resturant opening hours" textFill="#f7f0f0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="OpeningHours" layoutX="290.0" layoutY="152.0" prefHeight="26.0" prefWidth="90.0" />
+      <Button layoutX="264.0" layoutY="445.0" mnemonicParsing="false" onAction="#AddRestaurant" prefHeight="26.0" prefWidth="122.0" style="-fx-background-color: #505050;" text="Add Restaurant" textFill="#f7f5f5" />
+      <Button layoutX="50.0" layoutY="446.0" mnemonicParsing="false" onAction="#ThirdSceneBack" style="-fx-background-color: #505050;" text="Back" textFill="#f4f2f2" />
+      <Label layoutX="55.0" layoutY="310.0" prefHeight="30.0" prefWidth="254.0" text="Add Resturent photo profile" textFill="#f7f6f6">
+         <font>
+            <Font name="System Italic" size="20.0" />
+         </font>
+      </Label>
+      <Button layoutX="45.0" layoutY="380.0" mnemonicParsing="false" onAction="#addPhoto" style="-fx-background-color: #505050;" text="Add photo" textFill="WHITE" />
+      <Label fx:id="msg0" layoutX="91.0" layoutY="492.0" prefHeight="25.0" prefWidth="386.0" textFill="#f20404">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="photoFile" layoutX="126.0" layoutY="378.0" prefHeight="30.0" prefWidth="254.0" textFill="#f7f6f6">
+         <font>
+            <Font name="System Italic" size="20.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
