@@ -7,19 +7,19 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="afterLogin" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="524.0" prefWidth="402.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projects.software.restaurantns.ProfileController">
+<AnchorPane fx:id="afterLogin" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="524.0" prefWidth="402.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projects.software.restaurantns.UserProfileController">
    <children>
-      <ImageView fitHeight="135.0" fitWidth="172.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="personalPhoto" fitHeight="135.0" fitWidth="172.0" onDragDetected="#uploadPhoto" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../images/person-icon-gif-25.jpg" />
          </image>
       </ImageView>
-      <Label layoutX="164.0" layoutY="44.0" prefHeight="68.0" prefWidth="196.0" text="Name_User">
+      <Label fx:id="name" layoutX="164.0" layoutY="44.0" prefHeight="68.0" prefWidth="196.0" text="Name_User">
          <font>
             <Font name="Monospaced Bold Italic" size="24.0" />
          </font>
       </Label>
-      <Button layoutX="119.0" layoutY="185.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="196.0" text="Change Password">
+      <Button layoutX="119.0" layoutY="185.0" mnemonicParsing="false" onAction="#changePassword" prefHeight="36.0" prefWidth="196.0" text="Change Password">
          <font>
             <Font name="Monospaced Bold Italic" size="18.0" />
          </font>
@@ -29,12 +29,12 @@
             <Image url="@../../../images/5498115.png" />
          </image>
       </ImageView>
-      <Button layoutX="13.0" layoutY="482.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="70.0" text="Back">
+      <Button layoutX="13.0" layoutY="482.0" mnemonicParsing="false" onAction="#back" prefHeight="27.0" prefWidth="70.0" text="Back">
          <font>
             <Font name="Monospaced Bold Italic" size="14.0" />
          </font>
       </Button>
-      <Button layoutX="133.0" layoutY="409.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="135.0" text="Log out">
+      <Button layoutX="133.0" layoutY="409.0" mnemonicParsing="false" onAction="#logout" prefHeight="15.0" prefWidth="135.0" text="Log out">
          <font>
             <Font name="Monospaced Bold Italic" size="18.0" />
          </font>
@@ -49,12 +49,12 @@
             <Image url="@../../../images/09964be6ddf3df78bb95e1d94053de55.gif" />
          </image>
       </ImageView>
-      <Button layoutX="119.0" layoutY="240.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="196.0" text="Favorite ">
+      <Button layoutX="119.0" layoutY="240.0" mnemonicParsing="false" onAction="#favourite" prefHeight="36.0" prefWidth="196.0" text="Favorite ">
          <font>
             <Font name="Monospaced Bold Italic" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="119.0" layoutY="304.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="196.0" text="Rating&amp;Comment">
+      <Button layoutX="119.0" layoutY="304.0" mnemonicParsing="false" onAction="#userReview" prefHeight="36.0" prefWidth="196.0" text="Rating&amp;Comment">
          <font>
             <Font name="Monospaced Bold Italic" size="18.0" />
          </font>

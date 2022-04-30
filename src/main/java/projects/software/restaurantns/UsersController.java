@@ -58,16 +58,16 @@ public class UsersController {
     }
 
     private void setTableColumn() {
-        addButtonToTable();
+       // addButtonToTable();
         username.setCellValueFactory(new PropertyValueFactory<>("name"));
-        password.setCellValueFactory(new PropertyValueFactory<>("password"));
+       // password.setCellValueFactory(new PropertyValueFactory<>("password"));
         type.setCellValueFactory(new PropertyValueFactory<>("type"));
         creation_date.setCellValueFactory(new PropertyValueFactory<>("creation_date"));
         last_access.setCellValueFactory(new PropertyValueFactory<>("last_access_date"));
         updated_at.setCellValueFactory(new PropertyValueFactory<>("updated_at"));
         enabled.setCellValueFactory(new PropertyValueFactory<>("enabled"));
         photo.setCellValueFactory(new PropertyValueFactory<>("img"));
-        usersList.addAll(DbWraper.getUsers());
+        usersList.addAll(DbWrapper.getUsers());
         userTable.setItems(usersList);
     }
 
@@ -105,7 +105,7 @@ public class UsersController {
 
                         deleteIcon.setOnMouseClicked((MouseEvent event) -> {
                             selectedUser = userTable.getSelectionModel().getSelectedItem();
-                            if(Confirm("Delete User") && DbWraper.deleteUser(selectedUser)){
+                            if(Confirm("Delete User") && DbWrapper.deleteUser(selectedUser)){
                                 Alert success = new Alert(Alert.AlertType.INFORMATION);
                                 success.setTitle("Successfully");
                                 success.setHeaderText(selectedUser.getName() + "Deleted Successfully");
@@ -156,7 +156,7 @@ public class UsersController {
 
     private void refreshTable() {
         usersList.clear();
-        usersList.addAll(DbWraper.getUsers());
+        usersList.addAll(DbWrapper.getUsers());
         userTable.refresh();
     }
 
