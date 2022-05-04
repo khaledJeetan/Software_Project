@@ -5,6 +5,7 @@
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -12,7 +13,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="926.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projects.software.restaurantns.ItemMainscreen">
+<AnchorPane prefHeight="926.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projects.software.restaurantns.itemMainScreenController">
    <children>
       <ScrollPane layoutX="365.0" layoutY="96.0" prefHeight="826.0" prefWidth="646.0" style="-fx-background-color: #BCBCBC;">
          <content>
@@ -21,33 +22,33 @@
                   <Pane layoutY="-1.0" prefHeight="771.0" prefWidth="612.0">
                      <children>
                         <Label layoutX="54.0" layoutY="169.0" />
-                        <Label layoutX="21.0" layoutY="14.0" text="Sham cafe">
+                        <Label fx:id="name" layoutX="21.0" layoutY="14.0" text="Sham cafe">
                            <font>
                               <Font name="System Bold" size="36.0" />
                            </font>
                         </Label>
-                        <Button layoutX="453.0" layoutY="27.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="118.0" text="save">
+                        <Button layoutX="453.0" layoutY="27.0" mnemonicParsing="false" onAction="#save" prefHeight="40.0" prefWidth="118.0" text="save">
                            <font>
                               <Font size="18.0" />
                            </font>
                         </Button>
-                        <Label layoutX="26.0" layoutY="67.0" text="Coffee&amp;Tea Resturent">
+                        <Label fx:id="type" layoutX="26.0" layoutY="67.0" text="Coffee&amp;Tea Resturent">
                            <font>
                               <Font size="18.0" />
                            </font>
                         </Label>
-                        <Label layoutX="26.0" layoutY="111.0" text="Service options: Dine-in · Takeaway">
+                        <Label fx:id="delivery" layoutX="26.0" layoutY="111.0" text="Service options: Dine-in · Takeaway">
                            <font>
                               <Font size="14.0" />
                            </font>
                         </Label>
                         <Line endX="462.99993896484375" endY="-1.52587890625E-5" layoutX="149.0" layoutY="148.0" startX="-148.00001525878906" startY="-1.52587890625E-5" />
-                        <Label layoutX="26.0" layoutY="169.0" text="Address: Rafedia, Nablus">
+                        <Label fx:id="address" layoutX="26.0" layoutY="169.0" text="Address: Rafedia, Nablus">
                            <font>
                               <Font size="18.0" />
                            </font>
                         </Label>
-                        <Label layoutX="69.0" layoutY="215.0" prefHeight="30.0" prefWidth="130.0" text="1700 808 081">
+                        <Label fx:id="number" layoutX="69.0" layoutY="215.0" prefHeight="30.0" prefWidth="130.0" text="1700 808 081">
                            <font>
                               <Font size="18.0" />
                            </font>
@@ -62,13 +63,13 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <Label layoutX="261.0" layoutY="269.0" text="8am-10pm">
+                        <Label fx:id="openinghours" layoutX="261.0" layoutY="269.0" text="8am-10pm">
                            <font>
                               <Font size="18.0" />
                            </font>
                         </Label>
                         <Line endX="440.33331298828125" endY="3.0517578125E-5" layoutX="170.0" layoutY="316.0" startX="-170.00001525878906" startY="3.0517578125E-5" />
-                        <Label layoutX="382.0" layoutY="274.0" text="open now" textFill="#3cc13c">
+                        <Label fx:id="isopen" layoutX="382.0" layoutY="274.0" text="open now" textFill="#3cc13c">
                            <font>
                               <Font size="14.0" />
                            </font>
@@ -103,16 +104,19 @@
                               <Font size="18.0" />
                            </font>
                         </Label>
-                        <RadioButton layoutX="7.0" layoutY="523.0" mnemonicParsing="false" />
+                        <RadioButton fx:id="onestar" layoutX="7.0" layoutY="523.0" mnemonicParsing="false">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="star" />
+                           </toggleGroup></RadioButton>
                         <ImageView fitHeight="18.0" fitWidth="30.0" layoutX="45.0" layoutY="523.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../../images/640px-Golden_star.svg.png" />
                            </image>
                         </ImageView>
-                        <RadioButton layoutX="7.0" layoutY="549.0" mnemonicParsing="false" />
-                        <RadioButton layoutX="7.0" layoutY="581.0" mnemonicParsing="false" />
-                        <RadioButton layoutX="7.0" layoutY="610.0" mnemonicParsing="false" />
-                        <RadioButton layoutX="7.0" layoutY="637.0" mnemonicParsing="false" />
+                        <RadioButton fx:id="twostars" layoutX="7.0" layoutY="549.0" mnemonicParsing="false" toggleGroup="$star" />
+                        <RadioButton fx:id="threestars" layoutX="7.0" layoutY="581.0" mnemonicParsing="false" toggleGroup="$star" />
+                        <RadioButton fx:id="fourstars" layoutX="7.0" layoutY="610.0" mnemonicParsing="false" toggleGroup="$star" />
+                        <RadioButton fx:id="fivestars" layoutX="7.0" layoutY="637.0" mnemonicParsing="false" toggleGroup="$star" />
                         <ImageView fitHeight="18.0" fitWidth="30.0" layoutX="63.0" layoutY="554.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../../images/640px-Golden_star.svg.png" />
@@ -188,7 +192,7 @@
                               <Font size="18.0" />
                            </font>
                         </Label>
-                        <TextField layoutX="274.0" layoutY="533.0" prefHeight="43.0" prefWidth="253.0" promptText="Add a comment hear" />
+                        <TextField fx:id="comment" layoutX="274.0" layoutY="533.0" prefHeight="43.0" prefWidth="253.0" promptText="Add a comment hear" />
                         <Label layoutX="8.0" layoutY="663.0" text="Discribtion">
                            <font>
                               <Font name="System Bold" size="18.0" />
