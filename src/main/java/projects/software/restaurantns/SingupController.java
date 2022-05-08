@@ -34,7 +34,7 @@ public class SingupController {
         main.changeScene("login.fxml");
     }
 
-    private boolean validCreateAccount() {
+    public boolean validCreateAccount() {
         if(username.getText().isEmpty() || newpassword.getText().isEmpty()|| confirmpassword.getText().isEmpty()){
           //  msg.setText("Please Enter Information");
         }
@@ -42,7 +42,7 @@ public class SingupController {
           //  msg.setText("the Password is not equal");
         }
 
-        else if(!isUser()){
+        else if(!isUser(username.getText())){
             if(createUser()) {
              //   msg.setText("Account created Successfully");
               //  msg.setStyle("-fx-background-color:#d1e6dd");
@@ -58,12 +58,12 @@ public class SingupController {
         return false;
     }
 
-    private boolean isUser(){
+    public boolean isUser(String name ){
         try {
             String sql = "select USERNAME from user_tb where USERNAME = ?";
             con = main.getConnection();
             stmt = con.prepareStatement(sql);
-            stmt.setString(1, this.username.getText());
+            stmt.setString(1, name);
              ResultSet resultSet = stmt.executeQuery();
              if(resultSet.next()) {
                  stmt.close();

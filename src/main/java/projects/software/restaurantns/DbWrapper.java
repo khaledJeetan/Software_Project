@@ -199,7 +199,6 @@ public class DbWrapper {
 
     public static boolean deleteUser(User user){
         try {
-
             System.out.println("Program Is Here before Query Deleting");
             sql = "DELETE FROM USER_TB WHERE username  = ?";
             con = main.getConnection();

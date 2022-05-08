@@ -12,6 +12,8 @@ module projects.softwareengineering.restaurantms {
     requires java.sql;
     requires java.desktop;
     requires javafx.swing;
+    requires org.testng;
+    requires junit;
 
     opens projects.software.restaurantns to javafx.fxml;
     exports projects.software.restaurantns;
